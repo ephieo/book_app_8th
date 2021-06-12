@@ -1,1 +1,6 @@
-{"rianna":"ReadingList:{\n        title:Mathematics of Collective Action,\n        author:James Samuel Coleman,\n        company:Transaction Publishers,\n   }}"}
+{
+  "users": {
+    "potter": "ReadingList:{\n        title:Harry Potter and the Goblet of Fire,\n        author:J. K. Rowling,\n        company:Bloomsbury Publishing,\n   }}",
+    "low": "ReadingList:{\n        title:Dreamers and Schemers,\n        author:Barry Siegel,\n        company:University of California Press,\n   }}"
+  }
+}
