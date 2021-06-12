@@ -1,5 +1,1 @@
-{
-  "users": {
-    "helen": "ReadingList:{\n        title:Helen Keller,\n        author:Helen Keller,\n        company:Chartwell Books,\n   }}"
-  }
-}
+{"users":{"helen":"ReadingList:[{\n        title:The Complete Helen Forrester 4-Book Memoir: Twopence to Cross the Mersey, Liverpool Miss, By the Waters of Liverpool, Lime Street at Two,\n        author:Helen Forrester,\n        company:HarperCollins UK,\n   }}]","paul":"ReadingList:[{\n        title:Report upon the poor of the Parish of St. Paul's Knightsbridge, receiving legal and charitable relief, by a Sub-Committee appointed by the Parochial Council,\n        author:Parochial Council (SAINT PAUL, Knightsbridge, Parish of),\n        company:Publisher not found,\n   }}]","brooke":"ReadingList:[{\n        title:The Collected Poems of Rupert Brooke,\n        author:Rupert Brooke,George Edward Woodberry,Margaret Lavington,\n        company:McClelland, Goodchild & Stewart,\n   }}]"}}

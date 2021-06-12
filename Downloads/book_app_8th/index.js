@@ -1,7 +1,7 @@
 import promptSync from 'prompt-sync';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
-import { returnBookSelection } from './utils/utils.js';
+import { returnBookSelection, findUsername } from './utils/utils.js';
 
 dotenv.config();
 
@@ -42,33 +42,3 @@ fetch(
     returnBookSelection(username, response);
   })
   .catch((err) => console.log(err));
-
-//let selection = prompt("do you want to add a book to your collection ? enter the book id :  ");
-
-// function returnBookSelection() {
-//   prompt(
-//     "enter the book id for the book you'd like to save to your reading list. (Click Enter)"
-//   );
-//   let selection = prompt('Enter Book ID here :');
-//   //console.log(response);
-
-//   let dataRes = `ReadingList:${response[selection]}}`;
-
-//   fs.readFile('database.json', 'utf8', function (err, data) {
-//     let obj = JSON.parse(data);
-//     obj.users[username] = dataRes;
-
-//     fs.writeFileSync('database.json', JSON.stringify(obj));
-//     returnReadingList();
-//   });
-// }
-// function returnReadingList() {
-//   fs.readFile('database.json', 'utf8', function (err, data) {
-//     let shelf = JSON.parse(data);
-//     let name = Object.keys(shelf.users).filter((e) => e === `${username}`);
-//     console.log(shelf.users[name]);
-//     //let names = Object.values(shelf.users[username]);
-
-//     //console.log(shelf, name);
-//   });
-// }
