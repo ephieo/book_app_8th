@@ -1,1 +1,5 @@
-{"users":{"dove":"ReadingList:{\n        title:Dove Night Songs,\n        author:Dove Night,\n        company:Lulu.com,\n   }}","helen":"ReadingList:{\n        title:Division Street,\n        author:Helen Mort,\n        company:Random House,\n   }}","light":"ReadingList:{\n        title:The Light and Smith Manual,\n        author:Sol Felty Light,\n        company:Univ of California Press,\n   }}","ephie":"ReadingList:{\n        title:Love at First Bite,\n        author:Gina Meyers,\n        company:Publisher not found,\n   }}","levi":"ReadingList:{\n        title:Throne of Glass,\n        author:Sarah J. Maas,\n        company:Bloomsbury Publishing,\n   }}"}}
+{
+  "users": {
+    "helen": "ReadingList:{\n        title:Helen Keller,\n        author:Helen Keller,\n        company:Chartwell Books,\n   }}"
+  }
+}
