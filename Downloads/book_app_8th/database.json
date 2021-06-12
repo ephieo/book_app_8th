@@ -1,6 +1,1 @@
-{
-  "users": {
-    "potter": "ReadingList:{\n        title:Harry Potter and the Goblet of Fire,\n        author:J. K. Rowling,\n        company:Bloomsbury Publishing,\n   }}",
-    "low": "ReadingList:{\n        title:Dreamers and Schemers,\n        author:Barry Siegel,\n        company:University of California Press,\n   }}"
-  }
-}
+{"users":{"dove":"ReadingList:{\n        title:Dove Night Songs,\n        author:Dove Night,\n        company:Lulu.com,\n   }}","helen":"ReadingList:{\n        title:Division Street,\n        author:Helen Mort,\n        company:Random House,\n   }}","light":"ReadingList:{\n        title:The Light and Smith Manual,\n        author:Sol Felty Light,\n        company:Univ of California Press,\n   }}","ephie":"ReadingList:{\n        title:Love at First Bite,\n        author:Gina Meyers,\n        company:Publisher not found,\n   }}","levi":"ReadingList:{\n        title:Throne of Glass,\n        author:Sarah J. Maas,\n        company:Bloomsbury Publishing,\n   }}"}}

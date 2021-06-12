@@ -55,15 +55,16 @@ fetch(
       //console.log(obj);
 
       fs.writeFileSync('database.json', JSON.stringify(obj));
+      fs.readFile('database.json', 'utf8', function (err, data) {
+        let shelf = JSON.parse(data);
+        let name = Object.keys(shelf.users).filter((e) => e === `${username}`);
+        console.log(shelf.users[name]);
+        //let names = Object.values(shelf.users[username]);
+
+        console.log(shelf, name);
+      });
     });
   })
   .catch((err) => console.log(err));
 
-fs.readFile('database.json', 'utf8', function (err, data) {
-  let shelf = JSON.parse(data);
-  let names = Object.values(shelf.users);
-
-  // //console.log(names)
-  // console.log(names);
-});
 //let selection = prompt("do you want to add a book to your collection ? enter the book id :  ");
