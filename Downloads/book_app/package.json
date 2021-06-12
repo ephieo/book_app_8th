@@ -1,0 +1,20 @@
+{
+  "name": "book_app",
+  "version": "1.0.0",
+  "description": "an CLI that allows you to search and add books to your collection.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "author": "Ephrathah Oyedoh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "node-fetch": "^2.6.1",
+    "prompt": "^1.1.0",
+    "prompt-sync": "^4.2.0",
+    "terminal-image": "^2.0.0"
+  }
+}
