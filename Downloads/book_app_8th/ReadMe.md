@@ -42,3 +42,14 @@ After getting the users to store their chosen books in a reading list it left me
 - I also push up all my code and created a ReadMe.md to track my progress with the task.
 - I also refactored some code and extracted some code into functions in a utility file.
 - Started writing tests.
+
+//const jestConfig = {
+// //testMatch: ['**/__tests__/*.mjs?(x)'],
+// transform: {
+// '^.+\\.jsx?$': 'babel-jest',
+//     '^.+\\.mjs$': 'babel-jest',
+// },
+// moduleFileExtensions: ['js', 'jsx', 'mjs'],
+// };
+
+// export default jestConfig;

@@ -44,4 +44,4 @@ function findUsername(shelf, username) {
 function sum(a, b) {
   return a + b;
 }
-export { returnBookSelection, returnReadingList, findUsername };
+export { returnBookSelection, returnReadingList, findUsername, sum };
