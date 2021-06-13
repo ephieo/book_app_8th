@@ -44,7 +44,33 @@ After getting the users to store their chosen books in a reading list it left me
 ##### Jest ES6 module issue :
 
 - I tried many different solutions to handle the jest issue, until I reached a solution.
-- the given error : <pre><code>`SyntaxError: Cannot use import statement outside a module`</code></pre>
+
+###### the given error :
+
+ <pre><code>`SyntaxError: Cannot use import statement outside a module`</code></pre>
+
+###### The solution :
+
+  <pre><code>
+//package.json
+    "scripts": {
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "dev": "node index.js"
+                }
+  </code></pre>
+
+   <pre><code>
+//jest.config.js
+    const jestConfig = {
+            verbose: true,
+            //letting jest know what environment you're working in, in this case node,js.
+            testEnvironment: 'jest-environment-node',
+            //prevents jest from converting modules. 
+            transform: {},
+};
+
+export default jestConfig;
+  </code></pre>
 
 ### what I completed (11th-13 June):
 

@@ -9,10 +9,8 @@ let key = process.env.API_KEY;
 const prompt = promptSync();
 
 let title = prompt('What is the name of the book ? ');
-//console.log(title);
 
 let author = prompt("What is the author's name ? ");
-//console.log(author);
 
 let username = prompt('What is your username ? ');
 
