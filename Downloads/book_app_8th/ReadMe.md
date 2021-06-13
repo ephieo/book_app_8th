@@ -6,9 +6,12 @@
 
 - Type in a query and display a list of 5 books matching that query.
 
-* Each item in the list should include the book's author, title, and publishing company.
-  A user should be able to select a book from the five displayed to save to a “Reading List”
-  View a “Reading List” with all the books the user has selected from their queries -- this is a local reading list and not tied to Google Books’s account features.
+- Each item in the list should include the book's author, title, and publishing company. [x]
+- A user should be able to select a book from the five displayed to save to a “Reading List” [x]
+- View a “Reading List” with all the books the user has selected from their queries [x]
+- this is a local reading list and not tied to Google Books’s account features.[ ]
+
+# How to use this CLI application :
 
 # TIMELINE
 
@@ -46,7 +49,8 @@ After getting the users to store their chosen books in a reading list it left me
 
 ### what I Struggled with (11th-13 June):
 
-- I struggled with my function that returns reading lists, because it was calling the function immediately as my other function was reading the file. This caused the function to retrurn undefined but then return the actually return the reading list if you were to ente rthe same results again.
+- I struggled with my function that returns reading lists, because it was calling the function immediately as my other function was reading the file. This caused the function to retrurn undefined but then return the actually return the reading list if you were to ente rthe same results a second time.
+
 - I struggled with setting up Jest to work with ES6 modules.
 
 ### How I handled blockers (11th-13 June):
