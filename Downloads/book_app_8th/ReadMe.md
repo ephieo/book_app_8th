@@ -43,7 +43,8 @@ After getting the users to store their chosen books in a reading list it left me
 
 ##### Jest ES6 module issue :
 
-- I tried many different solutions to handle the jest issue
+- I tried many different solutions to handle the jest issue, until I reached a solution.
+- the given error : <pre><code>`SyntaxError: Cannot use import statement outside a module`</code></pre>
 
 ### what I completed (11th-13 June):
 
