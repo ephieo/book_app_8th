@@ -1,5 +1,15 @@
 # BOOK_APP TECH TEST SUBMISSION - EPHRATHAH OYEDOH
 
+# AIMS :
+
+### This application should allow you to:
+
+- Type in a query and display a list of 5 books matching that query.
+
+* Each item in the list should include the book's author, title, and publishing company.
+  A user should be able to select a book from the five displayed to save to a “Reading List”
+  View a “Reading List” with all the books the user has selected from their queries -- this is a local reading list and not tied to Google Books’s account features.
+
 # TIMELINE
 
 ## 9th-10th June 2021
@@ -78,14 +88,3 @@ export default jestConfig;
 - I also push up all my code and created a ReadMe.md to track my progress with the task.
 - I also refactored some code and extracted some code into functions in a utility file.
 - Started writing tests.
-
-//const jestConfig = {
-// //testMatch: ['**/__tests__/*.mjs?(x)'],
-// transform: {
-// '^.+\\.jsx?$': 'babel-jest',
-//     '^.+\\.mjs$': 'babel-jest',
-// },
-// moduleFileExtensions: ['js', 'jsx', 'mjs'],
-// };
-
-// export default jestConfig;
