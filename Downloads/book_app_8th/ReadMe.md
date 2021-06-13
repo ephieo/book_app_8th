@@ -51,7 +51,13 @@ After getting the users to store their chosen books in a reading list it left me
 
 - I struggled with my function that returns reading lists, because it was calling the function immediately as my other function was reading the file. This caused the function to retrurn undefined but then return the actually return the reading list if you were to ente rthe same results a second time.
 
+Initially it shows nothing but the description of the console log :
+
 <img width="617" alt="Screen Shot 2021-06-13 at 22 55 33" src="https://user-images.githubusercontent.com/60614102/121823054-a9290600-cc9a-11eb-92b9-f2ad08391a88.png">
+
+However, if you enter the same values into the console again you receive the object displaying the users reading list :
+
+<img width="589" alt="Screen Shot 2021-06-13 at 22 55 14" src="https://user-images.githubusercontent.com/60614102/121823079-cf4ea600-cc9a-11eb-8403-621ae1fbebd5.png">
 
 - I struggled with setting up Jest to work with ES6 modules.
 
