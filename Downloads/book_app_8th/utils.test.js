@@ -1,13 +1,8 @@
 import {
   returnBookSelection,
   returnReadingList,
-  sum,
   findUsername,
 } from './utils/utils.js';
-
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
 
 test(' findUsername function should return an array containing a username.', () => {
   expect(findUsername(testData.testObj, testData.username)).toEqual(['moon']);

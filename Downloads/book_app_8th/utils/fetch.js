@@ -1,4 +1,5 @@
-import { returnBookSelection, findUsername } from './utils.js';
+import { returnBookSelection } from './terminalDisplay.js';
+import { findUsername } from './utils.js';
 import fetch from 'node-fetch';
 
 export default function fetchFromApi(title, author, username, key) {
