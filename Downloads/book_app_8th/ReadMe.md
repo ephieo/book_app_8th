@@ -6,9 +6,9 @@
 
 - Type in a query and display a list of 5 books matching that query.
 
-- Each item in the list should include the book's author, title, and publishing company. [:white_check_mark:]
-- A user should be able to select a book from the five displayed to save to a “Reading List” [:white_check_mark:]
-- View a “Reading List” with all the books the user has selected from their queries [:white_check_mark:]
+- Each item in the list should include the book's author, title, and publishing company. :white_check_mark:
+- A user should be able to select a book from the five displayed to save to a “Reading List” :white_check_mark:
+- View a “Reading List” with all the books the user has selected from their queries :white_check_mark:
 - this is a local reading list and not tied to Google Books’s account features.[x]
 
 # How to use this CLI application :
