@@ -32,8 +32,13 @@ After getting the users to store their chosen books in a reading list it left me
 
 - My first task was to figure out how to loop through the users and only add a new user if that user doesn't exist.
 
+### what I Struggled with (11th-13 June):
+
+- I struggled with my function that returns reading lists, because it was calling the function immediately as my other function was reading the file. This caused the function to retrurn undefined but then return the actually return the reading list if you were to ente rthe same results again.
+
 ### what I completed (11th-13 June):
 
 - I managed to write a function called findUdername() which would allow me to loop through the usernames to check if the username already exists.
 - I also push up all my code and created a ReadMe.md to track my progress with the task.
 - I also refactored some code and extracted some code into functions in a utility file.
+- Started writing tests.

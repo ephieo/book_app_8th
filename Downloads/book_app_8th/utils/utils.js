@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { exit } from 'process';
+
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
@@ -14,16 +14,15 @@ function returnBookSelection(username, response) {
 
   fs.readFile('database.json', 'utf8', function (err, data) {
     let obj = JSON.parse(data);
-    console.log(findUsername(obj, username));
+    console.log(
+      'checking is findUsername returns anything',
+      findUsername(obj, username)
+    );
     obj.users[username] = dataRes;
-    if (findUsername(obj, username)) {
-      console.log(
-        `This username is already exists. \nExit using CTRL + C to restart or your chosen book will be added to ${username}'s Reading List:D`
-      );
-    }
 
     fs.writeFileSync('database.json', JSON.stringify(obj));
   });
+
   returnReadingList(username);
 }
 
@@ -32,7 +31,7 @@ function returnReadingList(username) {
     let shelf = JSON.parse(data);
     let name = findUsername(shelf, username);
 
-    console.log(shelf.users[name]);
+    console.log('displaying users reading list', shelf.users[username]);
 
     //console.log(shelf, name);
   });
@@ -41,5 +40,8 @@ function returnReadingList(username) {
 function findUsername(shelf, username) {
   let name = Object.keys(shelf.users).filter((e) => e === `${username}`);
   return name;
+}
+function sum(a, b) {
+  return a + b;
 }
 export { returnBookSelection, returnReadingList, findUsername };
