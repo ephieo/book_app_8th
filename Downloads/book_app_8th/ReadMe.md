@@ -28,7 +28,12 @@ After getting the users to store their chosen books in a reading list it left me
 - what if someone has the same username ?
 - I still need to display the users reading list.
 
-## 11th June 2021
+## 11th -13th June 2021
 
-- My first task today is to figure out how to loop through the users and only add a new user if that user doesn't exist.
+- My first task was to figure out how to loop through the users and only add a new user if that user doesn't exist.
+
+### what I completed (11th-13 June):
+
+- I managed to write a function called findUdername() which would allow me to loop through the usernames to check if the username already exists.
 - I also push up all my code and created a ReadMe.md to track my progress with the task.
+- I also refactored some code and extracted some code into functions in a utility file.

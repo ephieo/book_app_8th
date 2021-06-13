@@ -15,11 +15,12 @@ function returnBookSelection(username, response) {
   fs.readFile('database.json', 'utf8', function (err, data) {
     let obj = JSON.parse(data);
     console.log(findUsername(obj, username));
-    if (findUsername(obj, username)) {
-      console.log(`This username is already taken please start again :D`);
-      return 0;
-    }
     obj.users[username] = dataRes;
+    if (findUsername(obj, username)) {
+      console.log(
+        `This username is already exists. \nExit using CTRL + C to restart or your chosen book will be added to ${username}'s Reading List:D`
+      );
+    }
 
     fs.writeFileSync('database.json', JSON.stringify(obj));
   });
@@ -42,10 +43,3 @@ function findUsername(shelf, username) {
   return name;
 }
 export { returnBookSelection, returnReadingList, findUsername };
-
-// if (findUsername()) {
-//     fs.writeFileSync('database.json', JSON.stringify(obj));
-//     returnReadingList(username);
-//   }else{
-//       prompt("Try again this username already exists, sorry :D)")
-//   }
