@@ -30,11 +30,20 @@ After getting the users to store their chosen books in a reading list it left me
 
 ## 11th -13th June 2021
 
-- My first task was to figure out how to loop through the users and only add a new user if that user doesn't exist.
+- Figure out how to loop through the users and only add a new user if that user doesn't exist.
+- write unit test and try and apply TDD for any functions written.
+- research library's to help show the text more distinctly in terminal.
 
 ### what I Struggled with (11th-13 June):
 
 - I struggled with my function that returns reading lists, because it was calling the function immediately as my other function was reading the file. This caused the function to retrurn undefined but then return the actually return the reading list if you were to ente rthe same results again.
+- I struggled with setting up Jest to work with ES6 modules.
+
+### How I handled blockers (11th-13 June):
+
+##### Jest ES6 module issue :
+
+- I tried many different solutions to handle the jest issue
 
 ### what I completed (11th-13 June):
 
