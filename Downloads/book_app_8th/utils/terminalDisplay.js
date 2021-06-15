@@ -20,10 +20,11 @@ function returnBookSelection(username, response) {
       findUsername(obj, username)
     );
 
-    if (!findUsername(obj, username)) {
+    if (findUsername(obj, username).length == 0) {
       obj.users[username] = dataRes;
       fs.writeFileSync('database.json', JSON.stringify(obj));
     } else {
+      console.log('second statement');
       //console.log('accessing array', obj.users[username].readingList);
       obj.users[username].readingList.push(response[selection]);
 

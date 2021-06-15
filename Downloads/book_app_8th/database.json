@@ -1,1 +1,16 @@
-{"users":{"sun":{"readingList":["{\n            title:The Sun,\n            author:Sue Lord,\n            company:Your eBook Partners,\n       }","{\n            title:William Blake,\n            author:William Vaughan,\n            company:Tate Publishing & Enterprises,\n       }"]}}}
+{
+  "users": {
+    "sun": {
+      "readingList": [
+        "{\n            title:The Sun,\n            author:Sue Lord,\n            company:Your eBook Partners,\n       }",
+        "{\n            title:William Blake,\n            author:William Vaughan,\n            company:Tate Publishing & Enterprises,\n       }"
+      ]
+    },
+    "ephie": {
+      "readingList": [
+        "{\n              title:Sweet Boy and Wild One,\n              author:T. L. Hayes,\n              company:Bold Strokes Books Inc,\n         }",
+        "{\n              title:A Boy Scout in Hollywood,\n              author:Brian J. Hayes,\n              company:iUniverse,\n         }"
+      ]
+    }
+  }
+}

@@ -1,3 +1,4 @@
+// libraries to help with output/input and
 import promptSync from 'prompt-sync';
 import dotenv from 'dotenv';
 import fetchFromApi from './utils/fetch.js';
