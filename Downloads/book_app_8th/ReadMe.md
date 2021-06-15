@@ -13,9 +13,11 @@
 
 # How to use this CLI application :
 
+-----------------------------------------------********\*\*********------------------------------------------------------------
+
 # TIMELINE
 
-## 9th-10th June 2021
+## 9th-10th June 2021 - TASKS :
 
 - I started the project by researching and planning out my steps.
 - I had only built a CLI game in C++ before which was slightly easier in terms of input and output methods.
@@ -25,7 +27,7 @@
 - I sucessfully recieved the query data from the API and was able to take user input from the API. However, I was storing the whole response with the username instead of just their choices that needed to be added to the reading list.
 - I then reordered my steps.
 
-#### code steps :
+#### proposed code steps :
 
 - request input from user (book name, author, username)
 - make fetch request
@@ -41,7 +43,9 @@ After getting the users to store their chosen books in a reading list it left me
 - what if someone has the same username ?
 - I still need to display the users reading list.
 
-## 11th -13th June 2021
+-----------------------------------------------********\*\*********------------------------------------------------------------
+
+## 11th -13th June 2021 - TASKS :
 
 - Figure out how to loop through the users and only add a new user if that user doesn't exist.
 - write unit test and try and apply TDD for any functions written.
@@ -63,7 +67,13 @@ After getting the users to store their chosen books in a reading list it left me
 
 ### How I handled blockers (11th-13 June):
 
-##### Jest ES6 module issue :
+##### 1. Reading List render issue :
+
+- The problem was that I was rendering the readingList before the returnBookSelection() function had a chance to write the new response into the database.
+- I was stuck elsewhere so I left this to work on something else so that I could come back and work on it with fresh eyes.
+- My idea was that I could possible extract the database update functionality into another function so that it calls the returnReadingList function when it's finished writing into the database.
+
+##### 2. Jest ES6 module issue :
 
 - I tried many different solutions to handle the jest issue, until I reached a solution.
 
@@ -94,11 +104,28 @@ After getting the users to store their chosen books in a reading list it left me
 export default jestConfig;
   </code></pre>
 
-##### Reading List render issue :
+-----------------------------------------------********\*\*********------------------------------------------------------------
 
 ### what I completed (11th-13 June):
 
-- I managed to write a function called findUdername() which would allow me to loop through the usernames to check if the username already exists.
+- I managed to write a function called findUsername() which would allow me to loop through the usernames to check if the username already exists.
 - I also push up all my code and created a ReadMe.md to track my progress with the task.
 - I also refactored some code and extracted some code into functions in a utility file.
 - Started writing tests.
+
+## 14th -15th June 2021 - TASKS :
+
+- Figure out how to loop through the users and only add a new user if that user doesn't exist.
+- Figure out how to give user the option to check their reading list or search for a book
+- reorder the user journey
+- research library's to help show the text more distinctly in terminal.
+
+### what I Struggled with (14th-15th June):
+
+1.  I struggled for a while on how to access the nested ReadingList in the makeshift database that I'd created. This meant I couldn't push additional books onto that users readinglist.
+
+### How I handled blockers (14th-15th June):
+
+1.  I was stuck for a while but realised that it kept returning the reading list object as a string :
+
+### what I completed (14th-15th June):
