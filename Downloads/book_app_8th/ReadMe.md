@@ -132,14 +132,14 @@ export default jestConfig;
 
 I was stuck for a while but realised that it kept returning the reading list object as a string :
 
-<ins> let dataRes = `ReadingList:[${response[selection]}}]`;</ins>
+<pre><code>let dataRes = `ReadingList:[${response[selection]}}]`;</ins><code><pre>
 
 I fixed this by moving the `` to only surround the data being passed in as a the value of ReadingList.
 I figured out that it was parsing as a string by using typeof in a console log of the data being manipulated.
 
 The fix :
 
-<ins> let dataRes = { readingList: [`${[response[selection]]}`] };</ins>
+<pre><code> let dataRes = { readingList: [`${[response[selection]]}`] };<code><pre>
 
 #### 2.
 
