@@ -13,7 +13,7 @@
 
 # How to use this CLI application :
 
------------------------------------------------********\*\*********------------------------------------------------------------
+-----------------------------------------------\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*------------------------------------------------------
 
 # TIMELINE
 
@@ -43,7 +43,7 @@ After getting the users to store their chosen books in a reading list it left me
 - what if someone has the same username ?
 - I still need to display the users reading list.
 
------------------------------------------------********\*\*********------------------------------------------------------------
+-----------------------------------------------\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*------------------------------------------------------
 
 ## 11th -13th June 2021 - TASKS :
 
@@ -104,14 +104,14 @@ After getting the users to store their chosen books in a reading list it left me
 export default jestConfig;
   </code></pre>
 
------------------------------------------------********\*\*********------------------------------------------------------------
-
 ### what I completed (11th-13 June):
 
 - I managed to write a function called findUsername() which would allow me to loop through the usernames to check if the username already exists.
 - I also push up all my code and created a ReadMe.md to track my progress with the task.
 - I also refactored some code and extracted some code into functions in a utility file.
 - Started writing tests.
+
+-----------------------------------------------\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*------------------------------------------------------
 
 ## 14th -15th June 2021 - TASKS :
 
@@ -124,8 +124,28 @@ export default jestConfig;
 
 1.  I struggled for a while on how to access the nested ReadingList in the makeshift database that I'd created. This meant I couldn't push additional books onto that users readinglist.
 
+2.  I was still struggling the render the readinList in the right order (11th-13th June issue #1).
+
 ### How I handled blockers (14th-15th June):
 
-1.  I was stuck for a while but realised that it kept returning the reading list object as a string :
+#### 1.
+
+I was stuck for a while but realised that it kept returning the reading list object as a string :
+
+<ins> let dataRes = `ReadingList:[${response[selection]}}]`;</ins>
+
+I fixed this by moving the `` to only surround the data being passed in as a the value of ReadingList.
+I figured out that it was parsing as a string by using typeof in a console log of the data being manipulated.
+
+The fix :
+
+<ins> let dataRes = { readingList: [`${[response[selection]]}`] };</ins>
+
+#### 2.
+
+- Figured that the main issue was the order in which I was called things.
+- I also noticed that I was doing too much in the returnBookSelection() function it should only display the bookSelection as it says.However it was also writing into the database.
+
+- I tried to write tests for smaller functions to break down the long function and then proceeded to write the functions and try to pass teh tests.
 
 ### what I completed (14th-15th June):
