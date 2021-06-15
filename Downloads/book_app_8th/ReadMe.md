@@ -1,5 +1,12 @@
 # BOOK_APP TECH TEST SUBMISSION - EPHRATHAH OYEDOH
 
+# How to use this CLI application :
+- Clone repo locally
+- make sure you're in the `book_app_8th.git` folder. 
+- run `npm run dev` in the terminal 
+- follow app instructions. 
+
+
 # AIMS :
 
 ### This application should allow you to:
@@ -11,9 +18,8 @@
 - View a “Reading List” with all the books the user has selected from their queries :white_check_mark:
 - this is a local reading list and not tied to Google Books’s account features.[x]
 
-# How to use this CLI application :
 
------------------------------------------------\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # TIMELINE
 
@@ -43,7 +49,7 @@ After getting the users to store their chosen books in a reading list it left me
 - what if someone has the same username ?
 - I still need to display the users reading list.
 
------------------------------------------------\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 11th -13th June 2021 - TASKS :
 
@@ -111,7 +117,7 @@ export default jestConfig;
 - I also refactored some code and extracted some code into functions in a utility file.
 - Started writing tests.
 
------------------------------------------------\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 14th -15th June 2021 - TASKS :
 
