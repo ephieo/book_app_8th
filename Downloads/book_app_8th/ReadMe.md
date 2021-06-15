@@ -27,7 +27,7 @@
 - I sucessfully recieved the query data from the API and was able to take user input from the API. However, I was storing the whole response with the username instead of just their choices that needed to be added to the reading list.
 - I then reordered my steps.
 
-#### proposed code steps :
+###### proposed code steps :
 
 - request input from user (book name, author, username)
 - make fetch request
@@ -128,7 +128,7 @@ export default jestConfig;
 
 ### How I handled blockers (14th-15th June):
 
-#### 1.
+###### 1.
 
 I was stuck for a while but realised that it kept returning the reading list object as a string :
 
@@ -141,7 +141,7 @@ The fix :
 
 <pre><code> let dataRes = { readingList: [`${[response[selection]]}`] };</code></pre>
 
-#### 2.
+###### 2.
 
 - Figured that the main issue was the order in which I was called things.
 - I also noticed that I was doing too much in the returnBookSelection() function it should only display the bookSelection as it says.However it was also writing into the database.
