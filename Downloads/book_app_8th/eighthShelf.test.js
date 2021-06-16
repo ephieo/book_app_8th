@@ -1,4 +1,4 @@
-import { findUsername, colourText, errorMessage } from './utils/utils.js';
+import { findUsername, updateDatabase, errorMessage } from './utils/utils.js';
 import { jest } from '@jest/globals';
 
 test(' findUsername function should return an array containing a username.', () => {
@@ -9,13 +9,24 @@ test(' findUsername function should return an array containing a username.', () 
 //   expect(colourText(testData.string, testData.colour)).toEqual(['green']);
 // });
 
+test(' errorMessage function runs ', () => {
+  expect(errorMessage()).toEqual(0);
+});
+
+// test(' updates database ', () => {
+//   expect(updateDatabase(data, '0', 'ephie')).toEqual('');
+// });
+
 describe('Tests my console.log', () => {
   console.log = jest.fn();
+  let message = 'Try again and enter either 1 or 2';
   it('should console a message', () => {
-    console.log('My test is working with console.log');
+    console.log(
+      `Error : You\'ve entered the wrong input. Restart by entering : 'npm run play' ${message}`
+    );
 
     expect(console.log).toHaveBeenCalledWith(
-      'My test is working with console.log'
+      `Error : You\'ve entered the wrong input. Restart by entering : 'npm run play' Try again and enter either 1 or 2`
     );
   });
 });
@@ -43,5 +54,4 @@ let testData = {
     colour: 'green',
   },
   username: 'moon',
-  //testfunc: jest.fn(),
 };

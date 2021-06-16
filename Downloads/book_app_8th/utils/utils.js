@@ -50,6 +50,7 @@ function errorMessage(message) {
       'red'
     )
   );
+  return 0;
 }
 
 export {
