@@ -18,7 +18,12 @@ export default function fetchFromApi(title, author, username, key) {
       //if the book is not found it returns an error message instead of returning undefined.
       //it checks the amount of totalItems found in the response if zero it returns the message below.
       if (data.totalItems === 0) {
-        console.log('Sorry no books match your query. Please try again :D');
+        console.log(
+          colourText(
+            'Sorry no books match your query. Please try again :D',
+            'red'
+          )
+        );
       }
       //if there are books found it returns the data formatted into the {title:data,author:data,publishingCompany:data} format .
       //each line uses a ternary statement to return the message 'No___found' instead of undefined.
