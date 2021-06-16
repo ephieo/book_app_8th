@@ -20,7 +20,7 @@ test(' errorMessage function runs ', () => {
 describe('Tests my console.log', () => {
   console.log = jest.fn();
   let message = 'Try again and enter either 1 or 2';
-  it('should console a message', () => {
+  it('should console.log an error message', () => {
     console.log(
       `Error : You\'ve entered the wrong input. Restart by entering : 'npm run play' ${message}`
     );
