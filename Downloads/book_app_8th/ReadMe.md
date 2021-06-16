@@ -24,12 +24,12 @@
 
 ### I wrote about struggles and how I approached them through the given time for the assessment.
 
-## 9th-10th June 2021 - TASKS :
+## 9th-10th June 2021 :
 
 - I started the project by researching and planning out my steps.
 - I had only built a CLI game in C++ before which was slightly easier in terms of input and output methods.
-- I had never built a CLI in javascript so my plan was to focus on what I understood from the task first and then spent timeon what I didn't understand.
-- I managed to make the fetch request and create a database.json file to save user entries into but when i tried to loop through the objects when I parsed them from JSON back to JS i struggled with the order of steps.
+- I had never built a CLI in javascript so my plan was to focus on what I understood from the task first and then spent time on what I didn't understand.
+- I managed to make the fetch request and create a database.json file to save user entries into but when i tried to loop through the objects when I parsed them from JSON back to JS I struggled with the order of steps.
 - I then decided to rethink my approach. I also hadn't made a repo to track my commits so I took it as an oppurtunity to restart and track my steps accordingly.
 - I sucessfully recieved the query data from the API and was able to take user input from the API. However, I was storing the whole response with the username instead of just their choices that needed to be added to the reading list.
 - I then reordered my steps.
@@ -44,7 +44,7 @@
 - Book ID should match the array position for the returned data so that book will be selected.
 - write the chosen book with the user's username into the database.json file
 
-After getting the users to store their chosen books in a reading list it left me with the following task to solve.
+After getting the users to store their chosen books in a reading list it left me with the following task to solve:
 
 - How will I loop through the users in the database.json file to elect a user and add to their reading list ?
 - what if someone has the same username ?
@@ -54,9 +54,9 @@ After getting the users to store their chosen books in a reading list it left me
 
 ## 11th -13th June 2021 - TASKS :
 
-- Figure out how to loop through the users and only add a new user if that user doesn't exist.
+- Figure out how to loop through the users and only add a new user if that user doesn't exist. :white_check_mark:
 - write unit test and try and apply TDD for any functions written.
-- research library's to help show the text more distinctly in terminal.
+- research library's to help show the text more distinctly in terminal. :white_check_mark:
 
 ### what I Struggled with (11th-13 June):
 
@@ -120,12 +120,12 @@ export default jestConfig;
 
 ---
 
-## 14th -15th June 2021 - TASKS :
+## 14th -16th June 2021 - TASKS :
 
-- Figure out how to loop through the users and only add a new user if that user doesn't exist.
-- Figure out how to give user the option to check their reading list or search for a book
-- reorder the user journey
-- research library's to help show the text more distinctly in terminal.
+- Figure out how to loop through the users and only add a new user if that user doesn't exist. :white_check_mark:
+- Figure out how to give user the option to check their reading list or search for a book :white_check_mark:
+- reorder the user journey :white_check_mark:
+- research library's to help show the text more distinctly in terminal. :white_check_mark:
 
 ### what I Struggled with (14th-16th June):
 
@@ -136,7 +136,6 @@ export default jestConfig;
 3.  I struggled to write tests for functions that don't actaully return anything. I also found it hard to mock the fs module functions.
 
 4.  The dependency I used for console input/output (prompt) kept repeating the output when I used multiline outputs.
- <img width="621" alt="Screen Shot 2021-06-16 at 13 14 45" src="https://user-images.githubusercontent.com/60614102/122218414-5459db00-cea6-11eb-8954-24d2b6cdb12a.png">
 
 ### How I handled blockers (14th-16th June):
 
@@ -163,22 +162,11 @@ The fix :
 ###### (4).
 
 - I console.logged the multi-line part and then created the prompt as a one line variable.
- 
 
 ### what I completed (14th-16th June):
 
 - I reorganised the index.js file so that it takes the users choice and chooses which process to take. This helped solve the render issue the `returnReadingList` (now called `fetchReadingList()`) function. The function was no longer calling to `databas.json` before the text was writteen into the file becaus they were now independent processes.
 
 - I designed the terminal to make it distict from other terminal processes by using the kleur package.
-- I also changed the text background from a neon green to a white to provide more contrast.
-
-
-<img width="612" alt="Screen Shot 2021-06-16 at 12 28 25" src="https://user-images.githubusercontent.com/60614102/122218523-72274000-cea6-11eb-9616-d219bcb5e687.png">
-
-<img width="581" alt="Screen Shot 2021-06-16 at 12 29 07" src="https://user-images.githubusercontent.com/60614102/122218616-866b3d00-cea6-11eb-8691-94e5f5acf4e1.png">
-
-<img width="639" alt="Screen Shot 2021-06-16 at 13 28 17" src="https://user-images.githubusercontent.com/60614102/122218830-bdd9e980-cea6-11eb-803c-ae5358cacd6a.png">
-
-
 
 - I continued refactoring functions to reduce repeated code and tried to make my tests pass.
