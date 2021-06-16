@@ -1,15 +1,19 @@
 import { findUsername } from './utils/utils.js';
-import { returnReadingList } from './utils/terminalDisplay.js';
+import { fetchReadingList } from './utils/terminalDisplay.js';
 
 test(' findUsername function should return an array containing a username.', () => {
   expect(findUsername(testData.testObj, testData.username)).toEqual(['moon']);
 });
 
-// test(' function should display the returned fetch data with the bookshelf format', () => {
-//   expect(
-//     returnBookSelection(testData.username, testData.testObj)
-//   ).toHaveBeenCalled();
-// });
+test(' fetchReadingList() function should return the users reading list.', () => {
+  expect(fetchReadingList(testData.username)).toMatchObject(`readingList: [
+    '{\n' +
+      '              title:Book 67,\n' +
+      '              author:Blair Francis Hamilton,\n' +
+      '              publishingCompany:Holy Fire Publishing,\n' +
+      '         }'
+  ]`);
+});
 
 let testData = {
   testObj: {
@@ -20,9 +24,3 @@ let testData = {
   username: 'moon',
   //testfunc: jest.fn(),
 };
-
-test(' fetchReadingList() function should return the users reading list.', () => {
-  expect(
-    fetchReadingList(testData.username).users[username].readingList
-  ).toEqual(['New Moon, Writing']);
-});

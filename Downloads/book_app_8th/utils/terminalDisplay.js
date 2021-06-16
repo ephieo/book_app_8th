@@ -32,18 +32,16 @@ function updateBookshelf(username, response) {
     }
   });
 
-  returnReadingList(username);
+  //fetchReadingList(username);
 }
 
-function returnReadingList(username) {
+function fetchReadingList(username) {
   fs.readFile('database.json', 'utf8', function (err, data) {
     let shelf = JSON.parse(data);
-    let name = findUsername(shelf, username);
+    //let name = findUsername(shelf, username);
 
     console.log('displaying users reading list', shelf.users[username]);
-
-    //console.log(shelf, name);
   });
 }
 
-export { updateBookshelf, returnReadingList };
+export { updateBookshelf, fetchReadingList };
