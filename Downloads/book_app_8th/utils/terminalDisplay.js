@@ -45,24 +45,24 @@ function updateBookshelf(username, response, save) {
     );
     //function updates database.json with users newly added book.
     updateDatabase(response, selection, username);
+    console.log(
+      colourText(
+        `\nYour Book was added to your shelf, restart the app to view your shelf. 
+        \n${colourText('Bye,', 'blue')} ${colourText(
+          'Thank you',
+          'yellow'
+        )} ${colourText('for visiting', 'red')} ${colourText(
+          '8th Shelf :D',
+          'green'
+        )} `,
+        'magenta'
+      )
+    );
   } else {
     // if the user enters the wrong option it exists.
     errorMessage();
   }
   // log allows user to know that their book has been added to their shelf and greets them goodbye.
-  console.log(
-    colourText(
-      `\nYour Book was added to your shelf, restart the app to view your shelf. 
-      \n${colourText('Bye,', 'blue')} ${colourText(
-        'Thank you',
-        'yellow'
-      )} ${colourText('for visiting', 'red')} ${colourText(
-        '8th Shelf :D',
-        'green'
-      )} `,
-      'magenta'
-    )
-  );
 }
 
 //function calls to the database.json file and logs the readingList obj to the terminal.
