@@ -162,6 +162,7 @@ The fix :
 ###### (4).
 
 - I console.logged the multi-line part and then created the prompt as a one line variable.
+ <img width="621" alt="Screen Shot 2021-06-16 at 13 14 45" src="https://user-images.githubusercontent.com/60614102/122218414-5459db00-cea6-11eb-8954-24d2b6cdb12a.png">
 
 ### what I completed (14th-16th June):
 
@@ -169,6 +170,10 @@ The fix :
 
 - I designed the terminal to make it distict from other terminal processes by using the kleur package.
 
-"IMAGE GOES HERE"---------------------
+
+<img width="612" alt="Screen Shot 2021-06-16 at 12 28 25" src="https://user-images.githubusercontent.com/60614102/122218523-72274000-cea6-11eb-9616-d219bcb5e687.png">
+
+<img width="581" alt="Screen Shot 2021-06-16 at 12 29 07" src="https://user-images.githubusercontent.com/60614102/122218616-866b3d00-cea6-11eb-8691-94e5f5acf4e1.png">
+
 
 - I continued refactoring functions to reduce repeated code and tried to make my tests pass.
