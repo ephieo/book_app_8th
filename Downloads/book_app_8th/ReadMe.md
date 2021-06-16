@@ -136,6 +136,7 @@ export default jestConfig;
 3.  I struggled to write tests for functions that don't actaully return anything. I also found it hard to mock the fs module functions.
 
 4.  The dependency I used for console input/output (prompt) kept repeating the output when I used multiline outputs.
+ <img width="621" alt="Screen Shot 2021-06-16 at 13 14 45" src="https://user-images.githubusercontent.com/60614102/122218414-5459db00-cea6-11eb-8954-24d2b6cdb12a.png">
 
 ### How I handled blockers (14th-16th June):
 
@@ -162,18 +163,22 @@ The fix :
 ###### (4).
 
 - I console.logged the multi-line part and then created the prompt as a one line variable.
- <img width="621" alt="Screen Shot 2021-06-16 at 13 14 45" src="https://user-images.githubusercontent.com/60614102/122218414-5459db00-cea6-11eb-8954-24d2b6cdb12a.png">
+ 
 
 ### what I completed (14th-16th June):
 
 - I reorganised the index.js file so that it takes the users choice and chooses which process to take. This helped solve the render issue the `returnReadingList` (now called `fetchReadingList()`) function. The function was no longer calling to `databas.json` before the text was writteen into the file becaus they were now independent processes.
 
 - I designed the terminal to make it distict from other terminal processes by using the kleur package.
+- I also changed the text background from a neon green to a white to provide more contrast.
 
 
 <img width="612" alt="Screen Shot 2021-06-16 at 12 28 25" src="https://user-images.githubusercontent.com/60614102/122218523-72274000-cea6-11eb-9616-d219bcb5e687.png">
 
 <img width="581" alt="Screen Shot 2021-06-16 at 12 29 07" src="https://user-images.githubusercontent.com/60614102/122218616-866b3d00-cea6-11eb-8691-94e5f5acf4e1.png">
+
+<img width="639" alt="Screen Shot 2021-06-16 at 13 28 17" src="https://user-images.githubusercontent.com/60614102/122218830-bdd9e980-cea6-11eb-803c-ae5358cacd6a.png">
+
 
 
 - I continued refactoring functions to reduce repeated code and tried to make my tests pass.
