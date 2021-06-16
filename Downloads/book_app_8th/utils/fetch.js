@@ -1,6 +1,6 @@
 import { updateBookshelf, fetchReadingList } from './terminalDisplay.js';
 import fetch from 'node-fetch';
-import { colourText, findUsername } from './utils.js';
+import { colourText } from './utils.js';
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync({ sigint: true });
@@ -68,11 +68,3 @@ export default function fetchFromApi(title, author, username, key) {
     })
     .catch((err) => console.log(err));
 }
-// The username : ${colourText(
-//   `"${username}"`,
-//   'cyan'
-// )} already exists.
-//    The book selected will be added to ${colourText(
-//      `"${username}'s"`,
-//      'cyan'
-//    )} reading list.

@@ -5,6 +5,7 @@ import {
   writeIntoDatabase,
   colourText,
   updateDatabase,
+  errorMessage,
 } from './utils.js';
 import promptSync from 'prompt-sync';
 
@@ -46,14 +47,7 @@ function updateBookshelf(username, response, save) {
     updateDatabase(response, selection, username);
   } else {
     // if the user enters the wrong option it exists.
-    console.log(
-      colourText(
-        `Error : You\'ve entered the wrong input.
-    Restart by entering : 'npm run play' 
-    Try again and enter either 1 or 2 `,
-        'red'
-      )
-    );
+    errorMessage();
   }
   // log allows user to know that their book has been added to their shelf and greets them goodbye.
   console.log(
@@ -76,13 +70,22 @@ async function fetchReadingList(username) {
   fs.readFile('database.json', 'utf8', function (err, data) {
     let shelf = JSON.parse(data);
 
-    console.log(
-      colourText(
-        `\n ${colourText(`${username}`, 'cyan')} here's your Reading List : \n`,
-        'magenta'
-      ),
-      shelf.users[username].readingList
-    );
+    if (shelf.users[username]) {
+      console.log(
+        colourText(
+          `\n ${colourText(
+            `${username}`,
+            'cyan'
+          )} here's your Reading List : \n`,
+          'magenta'
+        ),
+        shelf.users[username].readingList
+      );
+    } else {
+      errorMessage(
+        'Re-enter your username or try creating a new reading list with another username'
+      );
+    }
   });
   return Promise.resolve('');
 }

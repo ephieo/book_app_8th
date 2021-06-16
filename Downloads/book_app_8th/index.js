@@ -3,7 +3,7 @@ import promptSync from 'prompt-sync';
 import dotenv from 'dotenv';
 import fetchFromApi from './utils/fetch.js';
 import { fetchReadingList } from './utils/terminalDisplay.js';
-import { colourText } from './utils/utils.js';
+import { colourText, errorMessage } from './utils/utils.js';
 
 dotenv.config();
 
@@ -40,19 +40,14 @@ if (choice === '1') {
   let author = prompt(colourText("What is the author's name ?", 'magenta'));
 
   let username = prompt(colourText('What is your username ? ', 'magenta'));
-
-  fetchFromApi(title, author, username, key);
+  if (title && author && username) {
+    fetchFromApi(title, author, username, key);
+  } else {
+    errorMessage('Try again and enter either 1 or 2');
+  }
 } else if (choice === '2') {
   let username = prompt(colourText('What is your username ?', 'magenta'));
   fetchReadingList(username);
 } else {
-  console.log(
-    colourText(
-      `
-  Error : You\'ve entered the wrong input.
-  Restart by entering : 'npm run play' 
-  Try again and enter either 1 or 2 `,
-      'red'
-    )
-  );
+  errorMessage('Try again and enter either 1 or 2');
 }

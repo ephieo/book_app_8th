@@ -5,7 +5,7 @@ to check if the users username exists  */
 
 function findUsername(bookshelf, username) {
   let name = Object.keys(bookshelf.users).filter((e) => e === `${username}`);
-  return name;
+  return !name ? errorMessage() : name;
 }
 /*Function that colours text in the terminal*/
 function colourText(text, colour) {
@@ -40,5 +40,22 @@ function updateDatabase(response, selection, username) {
     }
   });
 }
+function errorMessage(message) {
+  console.log(
+    colourText(
+      `
+  Error : You\'ve entered the wrong input.
+  Restart by entering : 'npm run play' 
+  ${message}`,
+      'red'
+    )
+  );
+}
 
-export { findUsername, colourText, writeIntoDatabase, updateDatabase };
+export {
+  findUsername,
+  colourText,
+  writeIntoDatabase,
+  updateDatabase,
+  errorMessage,
+};

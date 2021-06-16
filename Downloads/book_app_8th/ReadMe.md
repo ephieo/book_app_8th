@@ -16,10 +16,10 @@
 
 ### Additional information about how the app works :
 
-- You're unable tp create multiple reading lists with the same username.
+- You're unable to create multiple reading lists with the same username.
 - If you wish to add more books or view your reading list you enter `npm run play` to restart.
 - If you search for a book that doesn't exist it will exit out and tell you no book was found.
-- if you enter a username that already exists your book will be added to that readingList.
+- If you enter a username that already exists your book will be added to that reading list.
 
 # AIMS :
 
@@ -40,13 +40,13 @@
 
 ## 9th-10th June 2021 :
 
-- I started the project by researching and planning out my steps.
+- Started the project by researching and planning out my steps.
 - I had only built a CLI game in C++ before which was slightly easier in terms of input and output methods.
-- I had never built a CLI in javascript so my plan was to focus on what I understood from the task first and then spent time on what I didn't understand.
-- I managed to make the fetch request and create a database.json file to save user entries into but when i tried to loop through the objects when I parsed them from JSON back to JS I struggled with the order of steps.
-- I then decided to rethink my approach. I also hadn't made a repo to track my commits so I took it as an oppurtunity to restart and track my steps accordingly.
-- I sucessfully recieved the query data from the API and was able to take user input from the API. However, I was storing the whole response with the username instead of just their choices that needed to be added to the reading list.
-- I then reordered my steps.
+- I'd never built a CLI in javascript so my plan was to focus on what I understood from the task first and then spent time on what I didn't understand.
+- Managed to make the fetch request and create a database.json file to save user entries into but when i tried to loop through the objects when I parsed them from JSON back to JS I struggled with the order of steps.
+- Decided to rethink my approach. I also hadn't made a repo to track my commits so I took it as an oppurtunity to restart and track my steps accordingly.
+- Sucessfully recieved the query data from the API and was able to take user input from the API. However, I was storing the whole response with the username instead of just their choices that needed to be added to the reading list.
+- Reordered my steps.
 
 ###### proposed code steps :
 
@@ -173,6 +173,10 @@ The fix :
 
 - I tried to write tests for smaller functions to break down the long function and then proceeded to write the functions and try to pass the tests.
 
+###### (2).
+
+- I found it hard to write --------
+
 ###### (4).
 
 - I console.logged the multi-line part and then created the prompt as a one line variable.
@@ -200,3 +204,21 @@ I still have a lot to lesrn and will continue to build on my weak points.
 - It was my first time building a CLI in JavaScript.
   -It was a good chance to experince a more backend approach to JS with node.js.
 - I struggled with testing due to having little experience with it in the past. However I took it as a good oppurtunity to try and learn as much as I could.
+
+###### What I struggled with at the end and what I'd fix with more time ?
+
+- In the end I couldn't figure out how to write tests for the types of functions I wrote.
+- It was hard to write units tests for functions that used dependencies or functions that didn't return anything.
+- I researched about what I coud use and came across dependency injections and mock tests.
+- I got a good understanding on why its useful but couldn't understand its application and didn't want to use code I didn't understand.
+- If I had more time I would work more on getting the tests to work and solving the edge cases to do with existing usernames.
+- although usernames don't duplicate anymore it would be nice to have figured out how to at least let the user know that that username exists.
+
+# Dependencies :
+
+- dotenv (used to access environmental variables such as the API key.)
+- kleur (used to colour the output in the terminal)
+- node-fetch (used to make the fetch request with node.js)
+- prompt-sync (used for terminal output/input)
+
+# Ephrathah Oyedoh - Developer
