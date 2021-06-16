@@ -46,5 +46,13 @@ if (choice === '1') {
   let username = prompt(colourText('What is your username ?', 'magenta'));
   fetchReadingList(username);
 } else {
-  console.log(colourText('Error try again and enter either 1 or 2 ', 'red'));
+  console.log(
+    colourText(
+      `
+  Error : You\'ve entered the wrong input.
+  Restart by entering : 'npm run play' 
+  Try again and enter either 1 or 2 `,
+      'red'
+    )
+  );
 }
