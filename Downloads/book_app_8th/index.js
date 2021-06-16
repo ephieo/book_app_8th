@@ -9,10 +9,22 @@ let key = process.env.API_KEY;
 
 const prompt = promptSync();
 
-let title = prompt('What is the name of the book ? ');
+let choice = prompt(
+  `  Welcome to the 8th Bookshelf :D \n\n
+  --------------------------------------------------------
+  If you have a book shelf and would like to view it : \n
+  ENTER 1\n 
+  --------------------------------------------------------
+  If you would like to create a shelf and save a book  :\n
+  ENTER 2\n`
+);
 
-let author = prompt("What is the author's name ? ");
+if (choice === '2') {
+  let title = prompt('What is the name of the book ? ');
 
-let username = prompt('What is your username ? ');
+  let author = prompt("What is the author's name ? ");
 
-fetchFromApi(title, author, username, key);
+  let username = prompt('What is your username ? ');
+
+  fetchFromApi(title, author, username, key);
+}

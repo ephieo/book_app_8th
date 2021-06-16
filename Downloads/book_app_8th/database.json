@@ -1,1 +1,16 @@
-{"users":{"sun":{"readingList":["{\n            title:The Sun,\n            author:Sue Lord,\n            company:Your eBook Partners,\n       }","{\n            title:William Blake,\n            author:William Vaughan,\n            company:Tate Publishing & Enterprises,\n       }"]},"ephie":{"readingList":["{\n              title:Sweet Boy and Wild One,\n              author:T. L. Hayes,\n              company:Bold Strokes Books Inc,\n         }","{\n              title:A Boy Scout in Hollywood,\n              author:Brian J. Hayes,\n              company:iUniverse,\n         }"]},"moon":{"readingList":[""]}}}
+{
+  "users": {
+    "kate": {
+      "readingList": [
+        "{\n              title:Wanted!,\n              author:Kate Thompson,\n              publishingCompany:Random House,\n         }",
+        "{\n              title:Star Quilt,\n              author:Roberta Hill Whiteman,Roberta Hill,\n              publishingCompany:Holy Cow Press,\n         }"
+      ]
+    },
+    "blair": {
+      "readingList": [
+        "{\n              title:Book 67,\n              author:Blair Francis Hamilton,\n              publishingCompany:Holy Fire Publishing,\n         }",
+        "{\n              title:An Essay on the Antient and Modern State of Ireland,\n              author:Henry Brooke,\n              publishingCompany:Good Press,\n         }"
+      ]
+    }
+  }
+}
