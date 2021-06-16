@@ -5,7 +5,8 @@
 ## To run the app :
 
 - Clone repo locally
-- make sure you're in the `book_app_8th.git` folder.
+- cd `/Downloads/book_app_8th/`
+- make sure you're in the `book_app_8th` folder.
 - run `npm run play` in the terminal
 - follow app instructions.
 
@@ -17,6 +18,7 @@
 
 - You're unable tp create multiple reading lists with the same username.
 - If you wish to add more books or view your reading list you enter `npm run play` to restart.
+- If you search for a book that doesn't exist it will exit out and tell you no book was found.
 
 # AIMS :
 
