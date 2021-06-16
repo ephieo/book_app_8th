@@ -11,7 +11,7 @@
 
 ### This application should allow you to:
 
-- Type in a query and display a list of 5 books matching that query.
+- Type in a query and display a list of 5 books matching that query. :white_check_mark:
 
 - Each item in the list should include the book's author, title, and publishing company. :white_check_mark:
 - A user should be able to select a book from the five displayed to save to a “Reading List” :white_check_mark:
