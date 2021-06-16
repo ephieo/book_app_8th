@@ -5,7 +5,7 @@
 ## To run the app :
 
 - Clone repo locally
-- cd `/Downloads/book_app_8th/`
+- Make sure to cd to `/Downloads/book_app_8th/`
 - make sure you're in the `book_app_8th` folder.
 - run `npm run play` in the terminal
 - follow app instructions.
