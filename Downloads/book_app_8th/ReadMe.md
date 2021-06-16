@@ -2,10 +2,16 @@
 
 # How to use this CLI application :
 
+## To run the app :
+
 - Clone repo locally
 - make sure you're in the `book_app_8th.git` folder.
 - run `npm run play` in the terminal
 - follow app instructions.
+
+## Testing :
+
+- `run npm test`
 
 ### Additional information about how the app works :
 

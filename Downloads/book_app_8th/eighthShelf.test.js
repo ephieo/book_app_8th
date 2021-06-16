@@ -6,11 +6,9 @@ test(' findUsername function should return an array containing a username.', () 
 });
 
 test(' colourText takes two strings and should return one coloured string.', () => {
-  // const testFunc = jest.fn((string) => string);
-
-  // colourText();
-
-  expect(colourText()).toHaveReturned();
+  const mockKleur = jest.fn();
+  doAdd(1, 2, mockCallback);
+  expect(mockCallback).toHaveBeenCalledWith(3);
 
   //expect(colourText(testData.string, testData.colour)).toEqual(['green']);
 });
