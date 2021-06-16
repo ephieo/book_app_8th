@@ -170,5 +170,19 @@ The fix :
 - I designed the terminal to make it distinct from other terminal processes by using the kleur package.
 
 - I continued refactoring functions to reduce repeated code and tried to make my tests pass.
+- Refactored some code to removed and hard-coded values.
 
 # What I learned ?
+
+Throught this whole project I learnt a lot and struggled a lot but genuinely enjoyed the experience.
+It was fun to figure out the bugs I encountered and learn a little more about things I may have just touched on.
+I still have a lot to lesrn and will continue to build on my weak points.
+
+###### Theres a lot more that I encountered through this short project but here's a short recap :
+
+- I had used JSON but never as a form of local storage.
+  - I encountered some issues with parsing JSON to JS and vice versa.
+- I learned how to output to the terminal and recieve data from the terminal in Javascript, I'd only done that in C++.
+- It was my first time building a CLI in JavaScript.
+  -It was a good chance to experince a more backend approach to JS with node.js.
+- I struggled with testing due to having little experience with it in the past. However I took it as a good oppurtunity to try and learn as much as I could.

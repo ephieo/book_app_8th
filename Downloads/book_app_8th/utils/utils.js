@@ -9,7 +9,8 @@ function findUsername(bookshelf, username) {
 }
 /*Function that colours text in the terminal*/
 function colourText(text, colour) {
-  return kleur[colour](text);
+  let colouredText = kleur[colour](text);
+  return colouredText;
 }
 
 //function writes data into the database.json file.
