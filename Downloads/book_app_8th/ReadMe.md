@@ -175,7 +175,7 @@ The fix :
 
 ###### (2).
 
-- I found it hard to write --------
+- I found it hard to write tests for the type of functions I used, I tried to get a bette runderstanding of what types of tests I needed to write but only managed to write a few.
 
 ###### (4).
 
