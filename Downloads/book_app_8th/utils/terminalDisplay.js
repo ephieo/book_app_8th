@@ -5,7 +5,7 @@ import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
 
-function returnBookSelection(username, response) {
+function updateBookshelf(username, response) {
   prompt(
     "enter the book id for the book you'd like to save to your reading list. (Click Enter)"
   );
@@ -46,4 +46,4 @@ function returnReadingList(username) {
   });
 }
 
-export { returnBookSelection, returnReadingList };
+export { updateBookshelf, returnReadingList };

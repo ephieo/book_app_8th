@@ -1,4 +1,4 @@
-import { returnBookSelection } from './terminalDisplay.js';
+import { updateBookshelf } from './terminalDisplay.js';
 import fetch from 'node-fetch';
 
 //function that handles fetch requests.
@@ -40,7 +40,7 @@ export default function fetchFromApi(title, author, username, key) {
         );
         //it then passes this response data and users username to the returnBookSelection() function.
         //this function calls on the returnReadingList(username) function after checking if their username exists.
-        returnBookSelection(username, response);
+        updateBookshelf(username, response);
       }
     })
     .catch((err) => console.log(err));

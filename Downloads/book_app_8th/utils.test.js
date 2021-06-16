@@ -1,8 +1,5 @@
 import { findUsername } from './utils/utils.js';
-import {
-  returnBookSelection,
-  returnReadingList,
-} from './utils/terminalDisplay.js';
+import { returnReadingList } from './utils/terminalDisplay.js';
 
 test(' findUsername function should return an array containing a username.', () => {
   expect(findUsername(testData.testObj, testData.username)).toEqual(['moon']);
@@ -17,9 +14,15 @@ test(' findUsername function should return an array containing a username.', () 
 let testData = {
   testObj: {
     users: {
-      moon: 'ReadingList:[{\n        title:New Moon, Writing,\n        author:New Moon Books Girls Editorial Board,\n        company:Crown Pub,\n   }}]',
+      moon: 'readingList:[{\n        title:New Moon, Writing,\n        author:New Moon Books Girls Editorial Board,\n        company:Crown Pub,\n   }}]',
     },
   },
   username: 'moon',
   //testfunc: jest.fn(),
 };
+
+test(' fetchReadingList() function should return the users reading list.', () => {
+  expect(
+    fetchReadingList(testData.username).users[username].readingList
+  ).toEqual(['New Moon, Writing']);
+});
