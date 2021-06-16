@@ -1,5 +1,8 @@
 import { updateBookshelf } from './terminalDisplay.js';
 import fetch from 'node-fetch';
+// import promptSync from 'prompt-sync';
+
+// const prompt = promptSync();
 
 //function that handles fetch requests.
 export default function fetchFromApi(title, author, username, key) {
@@ -41,6 +44,15 @@ export default function fetchFromApi(title, author, username, key) {
         //it then passes this response data and users username to the returnBookSelection() function.
         //this function calls on the returnReadingList(username) function after checking if their username exists.
         updateBookshelf(username, response);
+
+        // let continueOn = prompt(
+        //   ' - Enter 1 to view your Reading list \n\n - Enter 2 to exit \n\n'
+        // );
+        // if (continueOn == '1') {
+        //   fetchReadingList();
+        // } else {
+        //   console.log('Bye Thank you for visiting 8th Shelf :D');
+        // }
       }
     })
     .catch((err) => console.log(err));
