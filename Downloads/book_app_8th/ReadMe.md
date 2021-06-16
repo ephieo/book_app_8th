@@ -55,7 +55,7 @@ After getting the users to store their chosen books in a reading list it left me
 ## 11th -13th June 2021 - TASKS :
 
 - Figure out how to loop through the users and only add a new user if that user doesn't exist. :white_check_mark:
-- write unit test and try and apply TDD for any functions written.
+- write unit test and try and apply TDD for any functions written. :eyes:
 - research library's to help show the text more distinctly in terminal. :white_check_mark:
 
 ### what I Struggled with (11th-13 June):
