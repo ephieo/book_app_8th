@@ -45,14 +45,6 @@ export default function fetchFromApi(title, author, username, key) {
         console.log(
           colourText(
             `  
-              The username : ${colourText(
-                `"${username}"`,
-                'cyan'
-              )} already exists. 
-                 The book selected will be added to ${colourText(
-                   `"${username}'s"`,
-                   'cyan'
-                 )} reading list.
   
                   --------------------------------------------------------
   
@@ -76,3 +68,11 @@ export default function fetchFromApi(title, author, username, key) {
     })
     .catch((err) => console.log(err));
 }
+// The username : ${colourText(
+//   `"${username}"`,
+//   'cyan'
+// )} already exists.
+//    The book selected will be added to ${colourText(
+//      `"${username}'s"`,
+//      'cyan'
+//    )} reading list.
