@@ -19,6 +19,7 @@
 - You're unable tp create multiple reading lists with the same username.
 - If you wish to add more books or view your reading list you enter `npm run play` to restart.
 - If you search for a book that doesn't exist it will exit out and tell you no book was found.
+- if you enter a username that already exists your book will be added to that readingList.
 
 # AIMS :
 
