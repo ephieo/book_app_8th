@@ -44,7 +44,14 @@ export default function fetchFromApi(title, author, username, key) {
         );
         console.log(
           colourText(
-            `  Welcome to the 8th Shelf :D 
+            `  The username : ${colourText(
+              `"${username}"`,
+              'cyan'
+            )} already exists. 
+               The book selected will be added to ${colourText(
+                 `"${username}'s"`,
+                 'cyan'
+               )} reading list.
 
                 --------------------------------------------------------
 

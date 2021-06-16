@@ -165,8 +165,10 @@ The fix :
 
 ### what I completed (14th-16th June):
 
-- I reorganised the index.js file so that it takes the users choice and chooses which process to take. This helped solve the render issue the `returnReadingList` (now called `fetchReadingList()`) function. The function was no longer calling to `databas.json` before the text was writteen into the file becaus they were now independent processes.
+- I reorganised the index.js file so that it takes the users choice and chooses which process to take. This helped solve the render issue the `returnReadingList` (now called `fetchReadingList()`) function. The function was no longer calling to `database.json` before the text was writteen into the file because they were now independent processes.
 
-- I designed the terminal to make it distict from other terminal processes by using the kleur package.
+- I designed the terminal to make it distinct from other terminal processes by using the kleur package.
 
 - I continued refactoring functions to reduce repeated code and tried to make my tests pass.
+
+# What I learned ?
