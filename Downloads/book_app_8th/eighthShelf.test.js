@@ -6,7 +6,7 @@ test(' findUsername function should return an array containing a username.', () 
 });
 
 test(' fetchReadingList() function should return the users reading list.', () => {
-  expect(fetchReadingList(testData.username)).toMatchObject(`readingList: [
+  expect(fetchReadingList(testData.username)).toContain(`readingList: [
     '{\n' +
       '              title:Book 67,\n' +
       '              author:Blair Francis Hamilton,\n' +

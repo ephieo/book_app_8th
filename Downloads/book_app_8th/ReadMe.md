@@ -16,11 +16,13 @@
 - Each item in the list should include the book's author, title, and publishing company. :white_check_mark:
 - A user should be able to select a book from the five displayed to save to a “Reading List” :white_check_mark:
 - View a “Reading List” with all the books the user has selected from their queries :white_check_mark:
-- this is a local reading list and not tied to Google Books’s account features.[x]
+- this is a local reading list and not tied to Google Books’s account features.:white_check_mark:
 
 ---
 
 # TIMELINE
+
+### I wrote about struggles and how I approached them through the given time for the assessment.
 
 ## 9th-10th June 2021 - TASKS :
 
@@ -125,15 +127,19 @@ export default jestConfig;
 - reorder the user journey
 - research library's to help show the text more distinctly in terminal.
 
-### what I Struggled with (14th-15th June):
+### what I Struggled with (14th-16th June):
 
 1.  I struggled for a while on how to access the nested ReadingList in the makeshift database that I'd created. This meant I couldn't push additional books onto that users readinglist.
 
 2.  I was still struggling the render the readinList in the right order (11th-13th June issue #1).
 
-### How I handled blockers (14th-15th June):
+3.  I struggled to write tests for functions that don't actaully return anything. I also found it hard to mock the fs module functions.
 
- ###### (1).
+4.  The dependency I used for console input/output (prompt) kept repeating the output when I used multiline outputs.
+
+### How I handled blockers (14th-16th June):
+
+###### (1).
 
 I was stuck for a while but realised that it kept returning the reading list object as a string :
 
@@ -146,12 +152,23 @@ The fix :
 
 <pre><code> let dataRes = { readingList: [`${[response[selection]]}`] };</code></pre>
 
-
 ###### (2).
 
 - Figured that the main issue was the order in which I was called things.
 - I also noticed that I was doing too much in the returnBookSelection() function it should only display the bookSelection as it says.However it was also writing into the database.
 
-- I tried to write tests for smaller functions to break down the long function and then proceeded to write the functions and try to pass teh tests.
+- I tried to write tests for smaller functions to break down the long function and then proceeded to write the functions and try to pass the tests.
 
-### what I completed (14th-15th June):
+###### (4).
+
+- I console.logged the multi-line part and then created the prompt as a one line variable.
+
+### what I completed (14th-16th June):
+
+- I reorganised the index.js file so that it takes the users choice and chooses which process to take. This helped solve the render issue the `returnReadingList` (now called `fetchReadingList()`) function. The function was no longer calling to `databas.json` before the text was writteen into the file becaus they were now independent processes.
+
+- I designed the terminal to make it distict from other terminal processes by using the kleur package.
+
+"IMAGE GOES HERE"---------------------
+
+- I continued refactoring functions to reduce repeated code and tried to make my tests pass.

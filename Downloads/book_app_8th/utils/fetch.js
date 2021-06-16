@@ -1,8 +1,9 @@
 import { updateBookshelf } from './terminalDisplay.js';
 import fetch from 'node-fetch';
-// import promptSync from 'prompt-sync';
+import { colourText } from './utils.js';
+import promptSync from 'prompt-sync';
 
-// const prompt = promptSync();
+const prompt = promptSync({ sigint: true });
 
 //function that handles fetch requests.
 export default function fetchFromApi(title, author, username, key) {
@@ -41,18 +42,28 @@ export default function fetchFromApi(title, author, username, key) {
         console.log(
           response.map((e) => `Book ID :${response.indexOf(e)} ${e}`)
         );
+        console.log(
+          colourText(
+            `  Welcome to the 8th Shelf :D 
+
+                --------------------------------------------------------
+
+                To save your book to your shelf  :
+
+                ${colourText('ENTER 1', 'bgWhite')}
+                --------------------------------------------------------
+                To Exit : 
+
+                ${colourText('ENTER 2', 'bgWhite')} 
+                
+                `,
+            'magenta'
+          )
+        );
+        let save = prompt(colourText('Enter Here :', 'cyan'));
         //it then passes this response data and users username to the returnBookSelection() function.
         //this function calls on the returnReadingList(username) function after checking if their username exists.
-        updateBookshelf(username, response);
-
-        // let continueOn = prompt(
-        //   ' - Enter 1 to view your Reading list \n\n - Enter 2 to exit \n\n'
-        // );
-        // if (continueOn == '1') {
-        //   fetchReadingList();
-        // } else {
-        //   console.log('Bye Thank you for visiting 8th Shelf :D');
-        // }
+        updateBookshelf(username, response, save);
       }
     })
     .catch((err) => console.log(err));
