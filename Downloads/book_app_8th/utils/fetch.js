@@ -1,6 +1,6 @@
-import { updateBookshelf } from './terminalDisplay.js';
+import { updateBookshelf, fetchReadingList } from './terminalDisplay.js';
 import fetch from 'node-fetch';
-import { colourText } from './utils.js';
+import { colourText, findUsername } from './utils.js';
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync({ sigint: true });
@@ -44,26 +44,27 @@ export default function fetchFromApi(title, author, username, key) {
         );
         console.log(
           colourText(
-            `  The username : ${colourText(
-              `"${username}"`,
-              'cyan'
-            )} already exists. 
-               The book selected will be added to ${colourText(
-                 `"${username}'s"`,
-                 'cyan'
-               )} reading list.
-
-                --------------------------------------------------------
-
-                To save your book to your shelf  :
-
-                ${colourText('ENTER 1', 'bgWhite')}
-                --------------------------------------------------------
-                To Exit : 
-
-                ${colourText('ENTER 2', 'bgWhite')} 
-                
-                `,
+            `  
+              The username : ${colourText(
+                `"${username}"`,
+                'cyan'
+              )} already exists. 
+                 The book selected will be added to ${colourText(
+                   `"${username}'s"`,
+                   'cyan'
+                 )} reading list.
+  
+                  --------------------------------------------------------
+  
+                  To save your book to your shelf  :
+  
+                  ${colourText('ENTER 1', 'bgWhite')}
+                  --------------------------------------------------------
+                  To Exit : 
+  
+                  ${colourText('ENTER 2', 'bgWhite')} 
+                  
+                  `,
             'magenta'
           )
         );

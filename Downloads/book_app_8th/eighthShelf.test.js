@@ -1,17 +1,16 @@
 import { findUsername, colourText } from './utils/utils.js';
-import { fetchReadingList } from './utils/terminalDisplay.js';
+//import { fetchReadingList } from './utils/terminalDisplay.js';
 
 test(' findUsername function should return an array containing a username.', () => {
   expect(findUsername(testData.testObj, testData.username)).toEqual(['moon']);
 });
 
-test(' colourText takes two strings and should return one coloured string.', () => {
-  const mockKleur = jest.fn();
-  doAdd(1, 2, mockCallback);
-  expect(mockCallback).toHaveBeenCalledWith(3);
-
-  //expect(colourText(testData.string, testData.colour)).toEqual(['green']);
-});
+// test(' colourText takes two strings and should return one coloured string.', () => {
+//   // const mockKleur = jest.fn();
+//   // doAdd(1, 2, mockCallback);
+//   // expect(mockCallback).toHaveBeenCalledWith(3);
+//   //expect(colourText(testData.string, testData.colour)).toEqual(['green']);
+// });
 
 // test(' fetchReadingList() function should return the users reading list.', () => {
 //   expect(fetchReadingList(testData.username)).toContain(`readingList: [
