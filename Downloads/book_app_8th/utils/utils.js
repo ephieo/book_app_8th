@@ -12,8 +12,32 @@ function colourText(text, colour) {
   return kleur[colour](text);
 }
 
+//function writes data into the database.json file.
 function writeIntoDatabase(obj) {
   return fs.writeFileSync('database.json', JSON.stringify(obj));
 }
 
-export { findUsername, colourText, writeIntoDatabase };
+function updateDatabase(response, selection, username) {
+  let dataRes = { readingList: [`${[response[selection]]}`] };
+
+  // reads database.json file and returns data parsed from JSON to JS.
+  fs.readFile('database.json', 'utf8', function (err, data) {
+    let obj = JSON.parse(data);
+
+    /* checks if the user's username already exists. 
+      If the username doesn't exist then the readingList obj is added to datanbas.json 
+      as a value of their username */
+    if (findUsername(obj, username).length == 0) {
+      obj.users[username] = dataRes;
+      //final formatted data is written into the database
+      writeIntoDatabase(obj);
+    } else {
+      /* If the username does exist then the response is pushed into the readingList array  */
+      obj.users[username].readingList.push(response[selection]);
+
+      writeIntoDatabase(obj);
+    }
+  });
+}
+
+export { findUsername, colourText, writeIntoDatabase, updateDatabase };

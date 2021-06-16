@@ -1,6 +1,11 @@
 //imports used for file reading/writing, calling utility functions and prompt for output/input.
 import fs from 'fs';
-import { findUsername, writeIntoDatabase, colourText } from './utils.js';
+import {
+  findUsername,
+  writeIntoDatabase,
+  colourText,
+  updateDatabase,
+} from './utils.js';
 import promptSync from 'prompt-sync';
 
 //prompt allow the use of input/output to the terminal.
@@ -37,28 +42,28 @@ function updateBookshelf(username, response, save) {
         'magenta'
       )
     );
+    updateDatabase(response, selection, username);
+    // //a variable storing the formatted response to be added to a new users object.
+    // let dataRes = { readingList: [`${[response[selection]]}`] };
 
-    //a variable storing the formatted response to be added to a new users object.
-    let dataRes = { readingList: [`${[response[selection]]}`] };
+    // // reads database.json file and returns data parsed from JSON to JS.
+    // fs.readFile('database.json', 'utf8', function (err, data) {
+    //   let obj = JSON.parse(data);
 
-    // reads database.json file and returns data parsed from JSON to JS.
-    fs.readFile('database.json', 'utf8', function (err, data) {
-      let obj = JSON.parse(data);
+    //   /* checks if the user's username already exists.
+    //   If the username doesn't exist then the readingList obj is added to datanbas.json
+    //   as a value of their username */
+    //   if (findUsername(obj, username).length == 0) {
+    //     obj.users[username] = dataRes;
+    //     //final formatted data is written into the database
+    //     writeIntoDatabase(obj);
+    //   } else {
+    //     /* If the username does exist then the response is pushed into the readingList array  */
+    //     obj.users[username].readingList.push(response[selection]);
 
-      /* checks if the user's username already exists. 
-      If the username doesn't exist then the readingList obj is added to datanbas.json 
-      as a value of their username */
-      if (findUsername(obj, username).length == 0) {
-        obj.users[username] = dataRes;
-        //final formatted data is written into the database
-        writeIntoDatabase(obj);
-      } else {
-        /* If the username does exist then the response is pushed into the readingList array  */
-        obj.users[username].readingList.push(response[selection]);
-
-        writeIntoDatabase(obj);
-      }
-    });
+    //     writeIntoDatabase(obj);
+    //   }
+    // });
   } else {
     // if the user enters the wrong option it exists.
     console.log(
