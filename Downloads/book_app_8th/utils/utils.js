@@ -52,7 +52,8 @@ function errorMessage(message) {
   );
   return 0;
 }
-
+// This function takes in a string and removes any special charcaters from that string
+// It then returns a corrected string that has had said characters removed.
 function correctString(string) {
   let regex = /[^A-Za-z0-9-_£$&@%\s]/gi;
   let replacedString = string.replace(regex, '');
