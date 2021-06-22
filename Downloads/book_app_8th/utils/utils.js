@@ -53,10 +53,19 @@ function errorMessage(message) {
   return 0;
 }
 
+function correctString(string) {
+  let regex = /[^A-Za-z0-9-_£$&@%\s]/gi;
+  let replacedString = string.replace(regex, '');
+  //REMOVE CONSOLE LOG BEFORE SUBMISSION !!!!
+  console.log('infunc', replacedString);
+  return replacedString;
+}
+
 export {
   findUsername,
   colourText,
   writeIntoDatabase,
   updateDatabase,
   errorMessage,
+  correctString,
 };
