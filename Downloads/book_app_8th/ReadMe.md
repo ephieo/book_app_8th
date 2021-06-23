@@ -78,11 +78,17 @@
       - This would help with readabilty because each function would have it's own independent role.
       - Write more understandable comments that makes the code easier to read through.
       - I created a function called `formatBookResult()` and extracted it to the utils file.
+      - I also created the userOptions() function to extract repeated code from index.js and fetch.js into the utils file.
 
     #### FEEDBACK :
 
 4.  What were the main tradeoffs for the language choice you made?
     - #### Notes :
+    - I chose to work with Node.js because Javascript is my strongest language, although this came with it's own setbacks.
+    - I'm glad I chose node.js because I didn't have to worry about learning syntax or the complexities of a new language.
+    - However, choosing node.js meant that I had to deal with the shortfalls of using node.js.
+    - An example of a problem I ran into was working with input/outputs. There are other languages such as c++ that have this functionality built into their standard library's.
+    - I had to depend on external dependency's to work with input/outputs which made it a little difficult to test because I was also new to testing external modules.
 
 # TIMELINE
 
