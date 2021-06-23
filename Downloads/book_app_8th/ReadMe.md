@@ -50,8 +50,10 @@
   #### FEEDBACK :
 
 1.  When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
-    - _throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_
-    - _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_
+     <pre><code>
+     _throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_
+     _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_
+    </code></pre>
     - I've fixed it on my end to be able to run your app. Please can you make changes to your README so other users can seamlessly run it?
     - #### Notes :
       - My first step was to reproduce the errors listed in the feedback returned to me.
@@ -61,7 +63,7 @@
       - so I made that change and push it to my `second-sub` branch.
     #### FEEDBACK :
 2.  When entering an emoji as the book title, the following error was thrown: ✅
-    - _TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_
+    <pre><code> _TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_</code></pre>
     - What changes would you make to allow your app to handle emojis or unexpected characters?
     - #### Notes :
       - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.

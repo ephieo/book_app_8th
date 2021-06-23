@@ -1,4 +1,9 @@
-import { findUsername, updateDatabase, errorMessage } from './utils/utils.js';
+import {
+  findUsername,
+  updateDatabase,
+  errorMessage,
+  correctString,
+} from './utils/utils.js';
 import { jest } from '@jest/globals';
 
 test(' findUsername function should return an array containing a username.', () => {
@@ -11,6 +16,14 @@ test(' findUsername function should return an array containing a username.', () 
 
 test(' errorMessage function runs ', () => {
   expect(errorMessage()).toEqual(0);
+});
+
+test(' takes string and removes undescaped charcters from said string. ', () => {
+  expect(
+    correctString(
+      'testing😂 testing😂 testing😂  --- ____ ^%£$@@(* 😂😂❤️💯🥰😄😁'
+    )
+  ).toEqual('testing testing testing  --- ____ %£$@@ ');
 });
 
 // test(' updates database ', () => {
