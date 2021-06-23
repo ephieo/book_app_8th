@@ -7,11 +7,12 @@
 - Clone repo locally
 - Make sure to cd to `/Downloads/book_app_8th/` or `cd book_app_8th/downloads/book_app_8th` depending on where you are.
 - make sure you're in the `book_app_8th` folder.
+- Make sure you have a version of node v14.5.0 or higher (this project utilises ES modules).
+- run `npm i` to install all required packages.
 - run `npm run play` in the terminal
 - follow app instructions.
 
 <img width="1440" alt="Screen Shot 2021-06-16 at 22 37 27" src="https://user-images.githubusercontent.com/60614102/122297605-9e1ce280-cef3-11eb-95f8-eda63093a973.png">
-
 
 ## Testing :
 
@@ -23,6 +24,7 @@
 - If you wish to add more books or view your reading list you enter `npm run play` to restart.
 - If you search for a book that doesn't exist it will exit out and tell you no book was found.
 - If you enter a username that already exists your book will be added to that reading list.
+- If you run into issues with your version of node please upgrade your version of node. There have been [noted versions that have issues](https://github.com/manuelbieh/geolib/issues/208) with `type:module`.
 
 # AIMS :
 
@@ -36,6 +38,48 @@
 - this is a local reading list and not tied to Google Books’s account features.:white_check_mark:
 
 ---
+
+# FEEDBACK - 2ND SUBMISSION :
+
+- My first step when receiving the feedback on my project was to break down the feedback into practical tasks/steps.
+- I first needed to reproduce the errors stated in my feedback and figure out how to fix them.
+
+### FEEDBACK FIXES :
+
+- I broke down the feedback into sections and gave notes on how I solved or planned to solve each issue.
+  #### FEEDBACK :
+
+1.  When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
+    - _throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_
+    - _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_
+    - I've fixed it on my end to be able to run your app. Please can you make changes to your README so other users can seamlessly run it?
+    - #### Notes :
+      - My first step was to reproduce the errors listed in the feedback returned to me.
+      - I couldn't reproduce the steps for the first two errors but I assumed it was because I had not detailed that you need to run `npm i` after cloning the repo and cd'ing to the correct folder.
+      - I also had not taken into account that other people viewing the project may not have the same node version or environment that I had to run my project.
+      - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
+      - so I made that change and push it to my `second-sub` branch.
+    #### FEEDBACK :
+2.  When entering an emoji as the book title, the following error was thrown: ✅
+    - _TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_
+    - What changes would you make to allow your app to handle emojis or unexpected characters?
+    #### Notes :
+    - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.
+    - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
+    - I then moved this function into the utils file to abstract it from index.js.
+    #### FEEDBACK :
+3.  I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?
+
+    #### Notes :
+
+         I can make the function more readable but extracting some of the formatting code into the utils file making it it's own function.
+
+         and write more understandable comments that makes the code easier to read through.
+
+    #### FEEDBACK :
+
+4.  What were the main tradeoffs for the language choice you made?
+    #### Notes :
 
 # TIMELINE
 
