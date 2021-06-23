@@ -60,13 +60,12 @@
     - I also had not taken into account that other people viewing the project may not have the same node version or environment that I had to run my project.
     - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
     - so I made that change and push it to my `second-sub` branch.
-  #### FEEDBACK :
 
 #### FEEDBACK :
 
 ###### 2. When entering an emoji as the book title, the following error was thrown: ✅
 
-_TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_
+`_TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_`
 
 - What changes would you make to allow your app to handle emojis or unexpected characters?
   - #### Notes :
