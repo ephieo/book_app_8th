@@ -56,7 +56,7 @@
 - I've fixed it on my end to be able to run your app. Please can you make changes to your README so other users can seamlessly run it?
   - #### Notes :
     - My first step was to reproduce the errors listed in the feedback returned to me.
-    - I couldn't reproduce the steps for the first two errors but I assumed it was because I had not detailed that you need to run `npm i` after cloning the repo and cd'ing to the correct folder.
+    - I couldn't reproduce the steps for the first two errors but I assumed it was because I had not detailed that you need to run `npm i` after cloning the repo and navigating to the correct folder.
     - I also had not taken into account that other people viewing the project may not have the same node version or environment that I had to run my project.
     - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
     - so I made that change and push it to my `second-sub` branch.
