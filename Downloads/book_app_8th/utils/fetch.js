@@ -1,6 +1,6 @@
 import { updateBookshelf, fetchReadingList } from './terminalDisplay.js';
 import fetch from 'node-fetch';
-import { colourText } from './utils.js';
+import { colourText, formatBookResult } from './utils.js';
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync({ sigint: true });
@@ -28,21 +28,7 @@ export default function fetchFromApi(title, author, username, key) {
       //if there are books found it returns the data formatted into the {title:data,author:data,publishingCompany:data} format .
       //each line uses a ternary statement to return the message 'No___found' instead of undefined.
       else {
-        response = data.items.map(
-          (e) => `{
-              title:${
-                !e.volumeInfo.title ? 'No title found' : e.volumeInfo.title
-              },
-              author:${
-                !e.volumeInfo.authors ? 'No Author found' : e.volumeInfo.authors
-              },
-              publishingCompany:${
-                !e.volumeInfo.publisher
-                  ? 'Publisher not found'
-                  : e.volumeInfo.publisher
-              },
-         }`
-        );
+        response = formatBookResult(data);
         //this outputs the returned formatted data to the console with a Book ID attached to that users can choose book.
         console.log(
           response.map((e) => `Book ID :${response.indexOf(e)} ${e}`)

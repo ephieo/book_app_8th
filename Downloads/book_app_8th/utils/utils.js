@@ -61,6 +61,19 @@ function correctString(string) {
   console.log('infunc', replacedString);
   return replacedString;
 }
+function formatBookResult(data) {
+  return data.items.map(
+    (e) => `{
+      title:${!e.volumeInfo.title ? 'No title found' : e.volumeInfo.title},
+      author:${
+        !e.volumeInfo.authors ? 'No Author found' : e.volumeInfo.authors
+      },
+      publishingCompany:${
+        !e.volumeInfo.publisher ? 'Publisher not found' : e.volumeInfo.publisher
+      },
+ }`
+  );
+}
 
 export {
   findUsername,
@@ -69,4 +82,5 @@ export {
   updateDatabase,
   errorMessage,
   correctString,
+  formatBookResult,
 };

@@ -75,8 +75,9 @@
     - #### Notes :
 
       - I can make the function more readable but extracting some of the formatting code into the utils file making it it's own function.
-
+      - This would help with readabilty because each function would have it's own independent role.
       - Write more understandable comments that makes the code easier to read through.
+      - I created a function called `formatBookResult()` and extracted it to the utils file.
 
     #### FEEDBACK :
 
