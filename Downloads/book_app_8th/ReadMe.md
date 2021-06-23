@@ -43,11 +43,11 @@
 
 - My first step when receiving the feedback on my project was to break down the feedback into practical tasks/steps.
 - I first needed to reproduce the errors stated in my feedback and figure out how to fix them.
+- I broke down the feedback into sections and gave notes on how I solved or planned to solve each issue.
 
 ### FEEDBACK FIXES :
 
-- I broke down the feedback into sections and gave notes on how I solved or planned to solve each issue.
-  #### FEEDBACK :
+#### FEEDBACK :
 
 1.  When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
      <pre><code>
