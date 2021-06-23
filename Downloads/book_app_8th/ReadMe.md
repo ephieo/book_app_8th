@@ -51,30 +51,28 @@
 
 ###### 1. When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
 
-     `_throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_
-     _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_`
+`_throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_ _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_`
 
-
-    - I've fixed it on my end to be able to run your app. Please can you make changes to your README so other users can seamlessly run it?
-    - #### Notes :
-      - My first step was to reproduce the errors listed in the feedback returned to me.
-      - I couldn't reproduce the steps for the first two errors but I assumed it was because I had not detailed that you need to run `npm i` after cloning the repo and cd'ing to the correct folder.
-      - I also had not taken into account that other people viewing the project may not have the same node version or environment that I had to run my project.
-      - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
-      - so I made that change and push it to my `second-sub` branch.
-    #### FEEDBACK :
+- I've fixed it on my end to be able to run your app. Please can you make changes to your README so other users can seamlessly run it?
+  - #### Notes :
+    - My first step was to reproduce the errors listed in the feedback returned to me.
+    - I couldn't reproduce the steps for the first two errors but I assumed it was because I had not detailed that you need to run `npm i` after cloning the repo and cd'ing to the correct folder.
+    - I also had not taken into account that other people viewing the project may not have the same node version or environment that I had to run my project.
+    - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
+    - so I made that change and push it to my `second-sub` branch.
+  #### FEEDBACK :
 
 #### FEEDBACK :
 
 ###### 2. When entering an emoji as the book title, the following error was thrown: ✅
 
-    `_TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_`
+_TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_
 
-    - What changes would you make to allow your app to handle emojis or unexpected characters?
-    - #### Notes :
-      - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.
-      - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
-      - I then moved this function into the utils file to abstract it from index.js.
+- What changes would you make to allow your app to handle emojis or unexpected characters?
+  - #### Notes :
+    - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.
+    - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
+    - I then moved this function into the utils file to abstract it from index.js.
 
 #### FEEDBACK :
 
