@@ -63,23 +63,23 @@
 2.  When entering an emoji as the book title, the following error was thrown: ✅
     - _TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_
     - What changes would you make to allow your app to handle emojis or unexpected characters?
-    #### Notes :
+    - #### Notes :
     - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.
     - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
     - I then moved this function into the utils file to abstract it from index.js.
     #### FEEDBACK :
 3.  I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?
 
-    #### Notes :
+    - #### Notes :
 
-         I can make the function more readable but extracting some of the formatting code into the utils file making it it's own function.
+      - I can make the function more readable but extracting some of the formatting code into the utils file making it it's own function.
 
-         and write more understandable comments that makes the code easier to read through.
+      - Write more understandable comments that makes the code easier to read through.
 
     #### FEEDBACK :
 
 4.  What were the main tradeoffs for the language choice you made?
-    #### Notes :
+    - #### Notes :
 
 # TIMELINE
 
