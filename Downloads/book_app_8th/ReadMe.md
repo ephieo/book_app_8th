@@ -49,7 +49,7 @@
 
 #### FEEDBACK :
 
-1.  When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
+1.  <span style="color:red">When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:</span>
      <pre><code>
      _throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_
      _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_
@@ -62,7 +62,7 @@
       - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
       - so I made that change and push it to my `second-sub` branch.
     #### FEEDBACK :
-2.  When entering an emoji as the book title, the following error was thrown: ✅
+2.  <span style="color:red">When entering an emoji as the book title, the following error was thrown: </span>.✅
     <pre><code> _TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_</code></pre>
     - What changes would you make to allow your app to handle emojis or unexpected characters?
     - #### Notes :
@@ -70,7 +70,7 @@
       - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
       - I then moved this function into the utils file to abstract it from index.js.
     #### FEEDBACK :
-3.  I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?
+3.  <span style="color:red"> I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?</span>.
 
     - #### Notes :
 
@@ -82,7 +82,7 @@
 
     #### FEEDBACK :
 
-4.  What were the main tradeoffs for the language choice you made?
+4.  <span style="color:red">What were the main tradeoffs for the language choice you made?</span>
     - #### Notes :
     - I chose to work with Node.js because Javascript is my strongest language, although this came with it's own setbacks.
     - I'm glad I chose node.js because I didn't have to worry about learning syntax or the complexities of a new language.
