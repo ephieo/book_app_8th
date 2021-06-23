@@ -51,10 +51,9 @@
 
 ###### 1. When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
 
-     <pre><code>
-     _throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_
-     _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_
-    </code></pre>
+     `_throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_
+     _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_`
+
 
     - I've fixed it on my end to be able to run your app. Please can you make changes to your README so other users can seamlessly run it?
     - #### Notes :
@@ -65,16 +64,19 @@
       - so I made that change and push it to my `second-sub` branch.
     #### FEEDBACK :
 
+#### FEEDBACK :
+
 ###### 2. When entering an emoji as the book title, the following error was thrown: ✅
 
-    <pre><code> _TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_</code></pre>
+    `_TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_`
 
     - What changes would you make to allow your app to handle emojis or unexpected characters?
     - #### Notes :
       - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.
       - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
       - I then moved this function into the utils file to abstract it from index.js.
-    #### FEEDBACK :
+
+#### FEEDBACK :
 
 ###### 3. I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?.
 
@@ -86,7 +88,7 @@
       - I created a function called `formatBookResult()` and extracted it to the utils file.
       - I also created the userOptions() function to extract repeated code from index.js and fetch.js into the utils file.
 
-    #### FEEDBACK :
+#### FEEDBACK :
 
 ###### 4. What were the main tradeoffs for the language choice you made?
 
