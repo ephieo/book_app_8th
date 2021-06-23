@@ -12,11 +12,12 @@
 - run `npm run play` in the terminal
 - follow app instructions.
 
-<img width="1440" alt="Screen Shot 2021-06-16 at 22 37 27" src="https://user-images.githubusercontent.com/60614102/122297605-9e1ce280-cef3-11eb-95f8-eda63093a973.png">
 
 ## Testing :
 
 - `run npm test`
+
+<img width="1440" alt="Screen Shot 2021-06-16 at 22 37 27" src="https://user-images.githubusercontent.com/60614102/122297605-9e1ce280-cef3-11eb-95f8-eda63093a973.png">
 
 ### Additional information about how the app works :
 
