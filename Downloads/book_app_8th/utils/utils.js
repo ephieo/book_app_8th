@@ -61,6 +61,8 @@ function correctString(string) {
   console.log('infunc', replacedString);
   return replacedString;
 }
+//if there are books found it returns the data formatted into the {title:data,author:data,publishingCompany:data} format .
+//each line uses a ternary statement to return the message 'No___found' instead of undefined.
 function formatBookResult(data) {
   return data.items.map(
     (e) => `{
@@ -74,6 +76,26 @@ function formatBookResult(data) {
  }`
   );
 }
+function userOptions(option1, option2, option3) {
+  console.log(
+    colourText(
+      `      ${option3 ? option3 : ''}
+
+            --------------------------------------------------------
+
+            ${option1} 
+
+            ${colourText('ENTER 1', 'bgWhite')}
+            --------------------------------------------------------
+            ${option2} 
+
+            ${colourText('ENTER 2', 'bgWhite')} 
+            
+            `,
+      'magenta'
+    )
+  );
+}
 
 export {
   findUsername,
@@ -83,4 +105,5 @@ export {
   errorMessage,
   correctString,
   formatBookResult,
+  userOptions,
 };

@@ -1,6 +1,6 @@
 import { updateBookshelf, fetchReadingList } from './terminalDisplay.js';
 import fetch from 'node-fetch';
-import { colourText, formatBookResult } from './utils.js';
+import { colourText, formatBookResult, userOptions } from './utils.js';
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync({ sigint: true });
@@ -24,33 +24,16 @@ export default function fetchFromApi(title, author, username, key) {
             'red'
           )
         );
-      }
-      //if there are books found it returns the data formatted into the {title:data,author:data,publishingCompany:data} format .
-      //each line uses a ternary statement to return the message 'No___found' instead of undefined.
-      else {
+      } else {
+        /*if the query returns a result then the resulting data is passed into the formatBookResult() 
+     function that returns said data in a {title:data,author:data,company:data} format*/
         response = formatBookResult(data);
         //this outputs the returned formatted data to the console with a Book ID attached to that users can choose book.
         console.log(
           response.map((e) => `Book ID :${response.indexOf(e)} ${e}`)
         );
-        console.log(
-          colourText(
-            `  
-  
-                  --------------------------------------------------------
-  
-                  To save your book to your shelf  :
-  
-                  ${colourText('ENTER 1', 'bgWhite')}
-                  --------------------------------------------------------
-                  To Exit : 
-  
-                  ${colourText('ENTER 2', 'bgWhite')} 
-                  
-                  `,
-            'magenta'
-          )
-        );
+        userOptions('To save your book to your shelf  :', 'To Exit : ');
+
         let save = prompt(colourText('Enter Here :', 'cyan'));
         //it then passes this response data and users username to the returnBookSelection() function.
         //this function calls on the returnReadingList(username) function after checking if their username exists.

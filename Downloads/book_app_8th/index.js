@@ -3,7 +3,12 @@ import promptSync from 'prompt-sync';
 import dotenv from 'dotenv';
 import fetchFromApi from './utils/fetch.js';
 import { fetchReadingList } from './utils/terminalDisplay.js';
-import { colourText, errorMessage, correctString } from './utils/utils.js';
+import {
+  colourText,
+  errorMessage,
+  correctString,
+  userOptions,
+} from './utils/utils.js';
 
 dotenv.config();
 
@@ -11,25 +16,11 @@ let key = process.env.API_KEY;
 
 const prompt = promptSync({ sigint: true });
 
-console.log(
-  colourText(
-    `  Welcome to the 8th Shelf :D 
-
-          --------------------------------------------------------
-
-          If you would like to create a shelf and save a book  :
-
-          ${colourText('ENTER 1', 'bgWhite')}
-
-          --------------------------------------------------------
-
-          If you have a book shelf and would like to view it : 
-
-          ${colourText('ENTER 2', 'bgWhite')}
-          
-          `,
-    'magenta'
-  )
+//calls userOptions function containing interchangeable options for the user to choose from.
+userOptions(
+  'If you would like to create a shelf and save a book  :',
+  'If you have a book shelf and would like to view it :',
+  'Welcome to the 8th Shelf :D'
 );
 
 let choice = prompt(colourText('Enter Here :', 'cyan'));
