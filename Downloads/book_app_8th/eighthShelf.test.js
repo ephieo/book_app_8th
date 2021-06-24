@@ -1,8 +1,10 @@
 import {
   findUsername,
-  updateDatabase,
+  //updateDatabase,
   errorMessage,
   correctString,
+  goodbyeMsg,
+  colourText,
 } from './utils/utils.js';
 import { jest } from '@jest/globals';
 import fs from './__mocks__/fs.js';
@@ -34,12 +36,24 @@ test(' findUsername function should return an array containing a username.', () 
   expect(findUsername(testData.testObj, testData.username)).toEqual(['moon']);
 });
 
-// test(' colourText takes two strings and should return one coloured string.', () => {
-//   expect(colourText(testData.string, testData.colour)).toEqual(['green']);
-// });
-
 test(' errorMessage function runs ', () => {
   expect(errorMessage()).toEqual(0);
+});
+
+test(' logs goodby message to the user in the terminal ', () => {
+  const spy = jest.spyOn(console, 'log');
+  goodbyeMsg();
+  expect(spy.mock.calls).toEqual([
+    [
+      `${colourText('Bye,', 'blue')} ${colourText(
+        'Thank you',
+        'yellow'
+      )} ${colourText('for visiting', 'red')} ${colourText(
+        '8th Shelf :D',
+        'green'
+      )}`,
+    ],
+  ]);
 });
 
 test(' takes string and removes undescaped charcters from said string. ', () => {

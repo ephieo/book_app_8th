@@ -1,7 +1,9 @@
 import kleur from 'kleur';
 import fs from 'fs';
-import { updateBookshelf } from './terminalDisplay.js';
 import promptSync from 'prompt-sync';
+
+import { updateBookshelf } from './terminalDisplay.js';
+
 const prompt = promptSync({ sigint: true });
 
 //------------------------------------------------------------------------------------------------------------------
@@ -31,6 +33,8 @@ function writeIntoDatabase(obj) {
 
 //------------------------------------------------------------------------------------------------------------------
 
+/* This function recieves formatted data from the handleUserRequest() function with the users username and 
+choice from the choices of whether to save their book or exit the programme*/
 function updateDatabase(response, selection, username) {
   let dataRes = { readingList: [`${[response[selection]]}`] };
 
@@ -76,9 +80,11 @@ function errorMessage(message) {
 function correctString(string) {
   let regex = /[^A-Za-z0-9-_£$&@%\s]/gi;
   let replacedString = string.replace(regex, '');
-  //REMOVE CONSOLE LOG BEFORE SUBMISSION !!!!
   return replacedString;
 }
+
+//------------------------------------------------------------------------------------------------------------------
+
 //if there are books found it returns the data formatted into the {title:data,author:data,publishingCompany:data} format .
 //each line uses a ternary statement to return the message 'No___found' instead of undefined.
 function formatBookResult(data) {

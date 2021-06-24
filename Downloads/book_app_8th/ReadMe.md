@@ -60,8 +60,9 @@
     - My first step was to reproduce the errors listed in the feedback returned to me.
     - I couldn't reproduce the steps for the first two errors but I assumed it was because I had not detailed that you need to run `npm i` after cloning the repo and navigating to the correct folder.
     - I also had not taken into account that other people viewing the project may not have the same node version or environment that I had to run my project.
+    - So I listed the node version I built the project in while recommending those viewing the project are working in a suitable node environment.
     - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
-    - so I made that change and push it to my `second-sub` branch.
+    - I made changes and pushed them to my `second-sub` branch.
 
 #### FEEDBACK :
 
@@ -97,6 +98,8 @@
     - However, choosing node.js meant that I had to deal with the shortfalls of using node.js.
     - An example of a problem I ran into was working with input/outputs in the terminal/console. There are other languages such as c++ that have this functionality built into their standard library's.
     - I had to depend on external dependency's to work with input/outputs which made it a little difficult to test because I was also new to testing external modules.
+    - In relation to the given project I think node.js was a suitable choice but if this project was to be scaled up or required more intensive tasks, then another language that handles intensive tasks more easily would be required.
+    - Using node.js however allowed me to use npm packages to help make up for the setbacks.
 
 # Extra things I worked on :
 
