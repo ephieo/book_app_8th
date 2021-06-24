@@ -25,14 +25,14 @@ userOptions(
 let choice = prompt(colourText('Enter Here :', 'cyan'));
 
 if (choice === '1') {
-  let title = prompt(colourText('What is the name of the book ? ', 'magenta'));
+  let title = prompt(colourText('What is the name of the book ? ', 'blue'));
   //corrcetString function removes unescaped characters.
   title = correctString(title);
 
-  let author = prompt(colourText("What is the author's name ?", 'magenta'));
+  let author = prompt(colourText("What is the author's name ?", 'blue'));
   author = correctString(author);
 
-  let username = prompt(colourText('What is your username ? ', 'magenta'));
+  let username = prompt(colourText('What is your username ? ', 'blue'));
   username = correctString(username);
 
   //condition to ensure that user enters a string into each field.
@@ -42,7 +42,7 @@ if (choice === '1') {
     errorMessage('Try again and enter either 1 or 2');
   }
 } else if (choice === '2') {
-  let username = prompt(colourText('What is your username ?', 'magenta'));
+  let username = prompt(colourText('What is your username ?', 'blue'));
   fetchReadingList(username);
 } else {
   errorMessage('Try again and enter either 1 or 2');

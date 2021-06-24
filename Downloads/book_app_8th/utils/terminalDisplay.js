@@ -26,13 +26,13 @@ function updateBookshelf(username, response, save) {
     console.log(
       colourText(
         "enter the book id for the book you'd like to save to your reading list. (Click Enter)",
-        'magenta'
+        'blue'
       )
     );
     let selection = prompt(
       colourText(
         'Enter Book ID here (only enter number in the following range [1-5]):',
-        'magenta'
+        'blue'
       )
     );
     selection = selection - 1;

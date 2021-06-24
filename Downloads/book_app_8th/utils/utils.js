@@ -118,7 +118,7 @@ function userOptions(option1, option2, option3) {
             ${colourText('ENTER 2', 'bgWhite')} 
             
             `,
-      'magenta'
+      'blue'
     )
   );
 }
