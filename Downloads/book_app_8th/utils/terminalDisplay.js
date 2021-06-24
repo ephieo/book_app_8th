@@ -39,7 +39,7 @@ function updateBookshelf(username, response, save) {
     );
     let selection = prompt(
       colourText(
-        'Enter Book ID here (only enter number in the following range [0-4]):',
+        'Enter Book ID here (only enter number in the following range [1-5]):',
         'magenta'
       )
     );
