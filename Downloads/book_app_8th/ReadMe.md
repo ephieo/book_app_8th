@@ -4,9 +4,10 @@
 
 ## To run the app :
 
-- Clone repo locally
+- Clone repo locally using `git clone` followed by the repo link.
+- ` git clone https://github.com/ephieo/book_app_8th.git`
 - Make sure to cd to `/Downloads/book_app_8th/` or `cd book_app_8th/downloads/book_app_8th` depending on where you are.
-- make sure you're in the `book_app_8th` folder.
+- make sure you're in the `book_app_8th.git` folder.
 - Make sure you have a version of node `v14.5.0` or higher (this project utilises ES modules).
 - check your current node version enter : `node -v` into your terminal.
 - The current npm version of this project is `7.17.0`.
