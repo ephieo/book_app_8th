@@ -36,7 +36,6 @@ if (choice === '1') {
   username = correctString(username);
 
   if (title && author && username) {
-    console.log('before submission', title, author, username);
     fetchFromApi(title, author, username, key);
   } else {
     errorMessage('Try again and enter either 1 or 2');

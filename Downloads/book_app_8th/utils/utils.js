@@ -58,7 +58,6 @@ function correctString(string) {
   let regex = /[^A-Za-z0-9-_£$&@%\s]/gi;
   let replacedString = string.replace(regex, '');
   //REMOVE CONSOLE LOG BEFORE SUBMISSION !!!!
-  console.log('infunc', replacedString);
   return replacedString;
 }
 //if there are books found it returns the data formatted into the {title:data,author:data,publishingCompany:data} format .

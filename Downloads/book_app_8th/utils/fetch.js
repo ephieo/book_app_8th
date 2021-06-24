@@ -30,7 +30,7 @@ export default function fetchFromApi(title, author, username, key) {
         response = formatBookResult(data);
         //this outputs the returned formatted data to the console with a Book ID attached to that users can choose book.
         console.log(
-          response.map((e) => `Book ID :${response.indexOf(e)} ${e}`)
+          response.map((e) => `Book ID :${response.indexOf(e) + 1} ${e}`)
         );
         userOptions('To save your book to your shelf  :', 'To Exit : ');
 
