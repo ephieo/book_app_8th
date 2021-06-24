@@ -43,6 +43,7 @@ function updateBookshelf(username, response, save) {
         'magenta'
       )
     );
+    selection = selection - 1;
     //function updates database.json with users newly added book.
     updateDatabase(response, selection, username);
     console.log(

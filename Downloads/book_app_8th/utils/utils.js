@@ -1,5 +1,8 @@
 import kleur from 'kleur';
 import fs from 'fs';
+import { updateBookshelf } from './terminalDisplay.js';
+import promptSync from 'prompt-sync';
+const prompt = promptSync({ sigint: true });
 /* This function takes in response takes formatted data from the so called "bookshelf" and the username of the user
 to check if the users username exists  */
 
@@ -96,6 +99,31 @@ function userOptions(option1, option2, option3) {
   );
 }
 
+function handleUserRequest(data, response, username) {
+  //recieves data from fetch request.
+  //if the book is not found it returns an error message instead of returning undefined.
+  //it checks the amount of totalItems found in the response if zero it returns the message below.
+  if (data.totalItems === 0) {
+    console.log(
+      colourText('Sorry no books match your query. Please try again :D', 'red')
+    );
+  } else {
+    /*if the query returns a result then the resulting data is passed into the formatBookResult() 
+     function that returns said data in a {title:data,author:data,company:data} format*/
+    response = formatBookResult(data);
+    //this outputs the returned formatted data to the console with a Book ID attached to that users can choose book.
+    console.log(
+      response.map((e) => `Book ID :${response.indexOf(e) + 1} ${e}`)
+    );
+    userOptions('To save your book to your shelf  :', 'To Exit : ');
+
+    let save = prompt(colourText('Enter Here :', 'cyan'));
+    //it then passes this response data and users username to the returnBookSelection() function.
+    //this function calls on the returnReadingList(username) function after checking if their username exists.
+    updateBookshelf(username, response, save);
+  }
+}
+
 export {
   findUsername,
   colourText,
@@ -105,4 +133,5 @@ export {
   correctString,
   formatBookResult,
   userOptions,
+  handleUserRequest,
 };

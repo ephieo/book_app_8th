@@ -1,6 +1,5 @@
 // libraries to help with output/input and
 import promptSync from 'prompt-sync';
-import dotenv from 'dotenv';
 import fetchFromApi from './utils/fetch.js';
 import { fetchReadingList } from './utils/terminalDisplay.js';
 import {
@@ -9,10 +8,6 @@ import {
   correctString,
   userOptions,
 } from './utils/utils.js';
-
-dotenv.config();
-
-let key = process.env.API_KEY;
 
 const prompt = promptSync({ sigint: true });
 
@@ -36,7 +31,7 @@ if (choice === '1') {
   username = correctString(username);
 
   if (title && author && username) {
-    fetchFromApi(title, author, username, key);
+    fetchFromApi(title, author, username);
   } else {
     errorMessage('Try again and enter either 1 or 2');
   }
