@@ -8,6 +8,7 @@
 - Make sure to cd to `/Downloads/book_app_8th/` or `cd book_app_8th/downloads/book_app_8th` depending on where you are.
 - make sure you're in the `book_app_8th` folder.
 - Make sure you have a version of node `v14.5.0` or higher (this project utilises ES modules).
+- to check your current node version enter : `node -v` into your terminal.
 - run `npm i` to install all required packages.
 - run `npm run play` in the terminal
 - follow app instructions.
