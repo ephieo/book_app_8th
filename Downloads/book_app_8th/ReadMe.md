@@ -53,7 +53,7 @@
 
 #### FEEDBACK :
 
-###### 1. When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
+###### 1. When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:✅
 
 `_throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_ _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_`
 
@@ -81,7 +81,7 @@
 
 #### FEEDBACK :
 
-###### 3. I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?.
+###### 3. I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?. ✅
 
     - #### Notes :
 
@@ -93,7 +93,7 @@
 
 #### FEEDBACK :
 
-###### 4. What were the main tradeoffs for the language choice you made?
+###### 4. What were the main tradeoffs for the language choice you made? ✅
 
     - #### Notes :
     - I chose to work with Node.js because Javascript is my strongest language, although this came with it's own setbacks.
