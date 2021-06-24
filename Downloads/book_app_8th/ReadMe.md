@@ -77,6 +77,7 @@
     - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.
     - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
     - I then moved this function into the utils file to abstract it from index.js.
+    - If I had more time I would have liked to figure out a way to actually parse emoji's and unescaped charcaters to allow them to be searched instead of removing them.
 
 #### FEEDBACK :
 
