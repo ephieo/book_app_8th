@@ -3,6 +3,9 @@ import fs from 'fs';
 import { updateBookshelf } from './terminalDisplay.js';
 import promptSync from 'prompt-sync';
 const prompt = promptSync({ sigint: true });
+
+//------------------------------------------------------------------------------------------------------------------
+
 /* This function takes in response takes formatted data from the so called "bookshelf" and the username of the user
 to check if the users username exists  */
 
@@ -10,16 +13,23 @@ function findUsername(bookshelf, username) {
   let name = Object.keys(bookshelf.users).filter((e) => e === `${username}`);
   return !name ? errorMessage() : name;
 }
+
+//------------------------------------------------------------------------------------------------------------------
+
 /*Function that colours text in the terminal*/
 function colourText(text, colour) {
   let colouredText = kleur[colour](text);
   return colouredText;
 }
 
+//------------------------------------------------------------------------------------------------------------------
+
 //function writes data into the database.json file.
 function writeIntoDatabase(obj) {
   return fs.writeFileSync('database.json', JSON.stringify(obj));
 }
+
+//------------------------------------------------------------------------------------------------------------------
 
 function updateDatabase(response, selection, username) {
   let dataRes = { readingList: [`${[response[selection]]}`] };
@@ -43,6 +53,9 @@ function updateDatabase(response, selection, username) {
     }
   });
 }
+
+//------------------------------------------------------------------------------------------------------------------
+
 function errorMessage(message) {
   console.log(
     colourText(
@@ -55,6 +68,9 @@ function errorMessage(message) {
   );
   return 0;
 }
+
+//------------------------------------------------------------------------------------------------------------------
+
 // This function takes in a string and removes any special charcaters from that string
 // It then returns a corrected string that has had said characters removed.
 function correctString(string) {
@@ -78,6 +94,8 @@ function formatBookResult(data) {
  }`
   );
 }
+//------------------------------------------------------------------------------------------------------------------
+
 function userOptions(option1, option2, option3) {
   console.log(
     colourText(
@@ -98,6 +116,8 @@ function userOptions(option1, option2, option3) {
     )
   );
 }
+
+//------------------------------------------------------------------------------------------------------------------
 
 function handleUserRequest(data, response, username) {
   //recieves data from fetch request.
@@ -123,6 +143,19 @@ function handleUserRequest(data, response, username) {
     updateBookshelf(username, response, save);
   }
 }
+//------------------------------------------------------------------------------------------------------------------
+
+function goodbyeMsg() {
+  console.log(
+    `${colourText('Bye,', 'blue')} ${colourText(
+      'Thank you',
+      'yellow'
+    )} ${colourText('for visiting', 'red')} ${colourText(
+      '8th Shelf :D',
+      'green'
+    )}`
+  );
+}
 
 export {
   findUsername,
@@ -134,4 +167,5 @@ export {
   formatBookResult,
   userOptions,
   handleUserRequest,
+  goodbyeMsg,
 };

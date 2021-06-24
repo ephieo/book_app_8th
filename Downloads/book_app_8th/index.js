@@ -1,7 +1,10 @@
-// libraries to help with output/input and
+// dependency to help with output/input
 import promptSync from 'prompt-sync';
+// function that makes a fetch request to the google books API.
 import fetchFromApi from './utils/fetch.js';
+// function reads the databas.json file to render back a user's reading list.
 import { fetchReadingList } from './utils/terminalDisplay.js';
+//util fnctions used to help minimise repeated code.
 import {
   colourText,
   errorMessage,
@@ -9,6 +12,7 @@ import {
   userOptions,
 } from './utils/utils.js';
 
+//initialising promptSync.
 const prompt = promptSync({ sigint: true });
 
 //calls userOptions function containing interchangeable options for the user to choose from.
@@ -22,6 +26,7 @@ let choice = prompt(colourText('Enter Here :', 'cyan'));
 
 if (choice === '1') {
   let title = prompt(colourText('What is the name of the book ? ', 'magenta'));
+  //corrcetString function removes unescaped characters.
   title = correctString(title);
 
   let author = prompt(colourText("What is the author's name ?", 'magenta'));
@@ -30,6 +35,7 @@ if (choice === '1') {
   let username = prompt(colourText('What is your username ? ', 'magenta'));
   username = correctString(username);
 
+  //condition to ensure that user enters a string into each field.
   if (title && author && username) {
     fetchFromApi(title, author, username);
   } else {

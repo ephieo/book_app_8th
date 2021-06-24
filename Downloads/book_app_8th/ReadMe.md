@@ -26,6 +26,7 @@
 - If you search for a book that doesn't exist it will exit out and tell you no book was found.
 - If you enter a username that already exists your book will be added to that reading list.
 - If you run into issues with your version of node please upgrade your version of node. There have been [noted versions that have issues](https://github.com/manuelbieh/geolib/issues/208) with `type:module`.
+- I've also left the `.env` file on GitHub so that it can be used by those reviewing it but it would ideally be kept local.
 
 # AIMS :
 
@@ -97,7 +98,7 @@
     - An example of a problem I ran into was working with input/outputs in the terminal/console. There are other languages such as c++ that have this functionality built into their standard library's.
     - I had to depend on external dependency's to work with input/outputs which made it a little difficult to test because I was also new to testing external modules.
 
-### Extra things I worked on :
+# Extra things I worked on :
 
 - I thought that users would be slightly confused by a zero-indexed based book ID system so I changed the range from [0-4] to [1-5].
 - I tried to work on some tests to mock the fs module, I still have a lot more to learn about testing dependencies but I thought I would try and see how far I got with it.
