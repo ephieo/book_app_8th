@@ -95,12 +95,13 @@
 
     - #### Notes :
     - I chose to work with Node.js because Javascript is my strongest language, although this came with it's own setbacks.
-    - I'm glad I chose node.js because I didn't have to worry about learning syntax or the complexities of a new language.
+    - I'm glad I chose node.js because I didn't have to worry about learning syntax or the complexities of a new language. Using node.js allowed me to reallocate the time and energy I would have spent on learning a new language to figuring out how to build the cli programme.
     - However, choosing node.js meant that I had to deal with the shortfalls of using node.js.
-    - An example of a problem I ran into was working with input/outputs in the terminal/console. There are other languages such as c++ that have this functionality built into their standard library's.
-    - I had to depend on external dependency's to work with input/outputs which made it a little difficult to test because I was also new to testing external modules.
+    - An example of a problem I ran into was working with input/outputs in the terminal/console. There are other languages such as c++ that I've used that have this functionality built into their standard library's.
+    - I had to depend on external dependency's to work with input/outputs which made it a little difficult to test because I was also new to testing external modules and mock testing.
     - In relation to the given project I think node.js was a suitable choice but if this project was to be scaled up or required more intensive tasks, then another language that handles intensive tasks more easily would be required.
     - Using node.js however allowed me to use npm packages to help make up for the setbacks.
+    - Npm being one of the most popular package managers right now meant that I had a lot of resources when I ran into issues with node.js and it's libraries/packages.
 
 # Extra things I worked on :
 
