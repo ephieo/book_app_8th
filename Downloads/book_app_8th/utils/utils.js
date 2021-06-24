@@ -118,7 +118,7 @@ function userOptions(option1, option2, option3) {
             ${colourText('ENTER 2', 'bgWhite')} 
             
             `,
-      'blue'
+      'cyan'
     )
   );
 }
@@ -143,7 +143,7 @@ function handleUserRequest(data, response, username) {
     );
     userOptions('To save your book to your shelf  :', 'To Exit : ');
 
-    let save = prompt(colourText('Enter Here :', 'cyan'));
+    let save = prompt(colourText('Enter Here :', 'green'));
     //it then passes this response data and users username to the returnBookSelection() function.
     //this function calls on the returnReadingList(username) function after checking if their username exists.
     updateBookshelf(username, response, save);
@@ -153,7 +153,7 @@ function handleUserRequest(data, response, username) {
 
 function goodbyeMsg() {
   console.log(
-    `${colourText('Bye,', 'blue')} ${colourText(
+    `${colourText('Bye,', 'cyan')} ${colourText(
       'Thank you',
       'yellow'
     )} ${colourText('for visiting', 'red')} ${colourText(

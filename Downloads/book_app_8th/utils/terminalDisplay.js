@@ -25,14 +25,14 @@ function updateBookshelf(username, response, save) {
     //if users select '1' then tge following asks for the user to input a Book ID
     console.log(
       colourText(
-        "enter the book id for the book you'd like to save to your reading list. (Click Enter)",
-        'blue'
+        "Enter the book id for the book you'd like to save to your reading list. (Click Enter)",
+        'cyan'
       )
     );
     let selection = prompt(
       colourText(
         'Enter Book ID here (only enter number in the following range [1-5]):',
-        'blue'
+        'cyan'
       )
     );
     selection = selection - 1;
@@ -56,7 +56,7 @@ async function fetchReadingList(username) {
         colourText(
           `\n ${colourText(
             `${username}`,
-            'cyan'
+            'green'
           )} here's your Reading List : \n`,
           'magenta'
         ),

@@ -110,7 +110,7 @@
 - I thought that users would be slightly confused by a zero-indexed based book ID system so I changed the range from [0-4] to [1-5].
 - I tried to work on some tests to mock the fs module, I still have a lot more to learn about testing dependencies but I thought I would try and see how far I got with it.
 - I also realised when testing my programme in powershell on a windows laptop that yellow and purple text didn't show.
-- I fixed this by changing the text colour to blue.
+- I fixed this by changing the text in magenta to cyan and all higlight text to green.
 
 # TIMELINE
 

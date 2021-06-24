@@ -22,17 +22,17 @@ userOptions(
   'Welcome to the 8th Shelf :D'
 );
 
-let choice = prompt(colourText('Enter Here :', 'cyan'));
+let choice = prompt(colourText('Enter Here :', 'green'));
 
 if (choice === '1') {
-  let title = prompt(colourText('What is the name of the book ? ', 'blue'));
+  let title = prompt(colourText('What is the name of the book ? ', 'cyan'));
   //corrcetString function removes unescaped characters.
   title = correctString(title);
 
-  let author = prompt(colourText("What is the author's name ?", 'blue'));
+  let author = prompt(colourText("What is the author's name ?", 'cyan'));
   author = correctString(author);
 
-  let username = prompt(colourText('What is your username ? ', 'blue'));
+  let username = prompt(colourText('What is your username ? ', 'cyan'));
   username = correctString(username);
 
   //condition to ensure that user enters a string into each field.
@@ -42,7 +42,7 @@ if (choice === '1') {
     errorMessage('Try again and enter either 1 or 2');
   }
 } else if (choice === '2') {
-  let username = prompt(colourText('What is your username ?', 'blue'));
+  let username = prompt(colourText('What is your username ?', 'cyan'));
   fetchReadingList(username);
 } else {
   errorMessage('Try again and enter either 1 or 2');
