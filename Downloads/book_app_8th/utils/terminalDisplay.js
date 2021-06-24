@@ -23,7 +23,7 @@ function updateBookshelf(username, response, save) {
     goodbyeMsg();
   } else if (save === '1') {
     //if users select '1' then tge following asks for the user to input a Book ID
-    prompt(
+    console.log(
       colourText(
         "enter the book id for the book you'd like to save to your reading list. (Click Enter)",
         'magenta'
