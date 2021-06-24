@@ -4,18 +4,22 @@
 
 ## To run the app :
 
-- Clone repo locally
+- Clone repo locally using `git clone` followed by the repo link.
+- ` git clone https://github.com/ephieo/book_app_8th.git`
 - Make sure to cd to `/Downloads/book_app_8th/` or `cd book_app_8th/downloads/book_app_8th` depending on where you are.
-- make sure you're in the `book_app_8th` folder.
+- make sure you're in the `book_app_8th.git` folder.
+- Make sure you have a version of node `v14.5.0` or higher (this project utilises ES modules).
+- check your current node version enter : `node -v` into your terminal.
+- The current npm version of this project is `7.17.0`.
+- run `npm i` to install all required packages.
 - run `npm run play` in the terminal
 - follow app instructions.
-
-<img width="1440" alt="Screen Shot 2021-06-16 at 22 37 27" src="https://user-images.githubusercontent.com/60614102/122297605-9e1ce280-cef3-11eb-95f8-eda63093a973.png">
-
 
 ## Testing :
 
 - `run npm test`
+
+<img width="1440" alt="Screen Shot 2021-06-16 at 22 37 27" src="https://user-images.githubusercontent.com/60614102/122297605-9e1ce280-cef3-11eb-95f8-eda63093a973.png">
 
 ### Additional information about how the app works :
 
@@ -23,6 +27,8 @@
 - If you wish to add more books or view your reading list you enter `npm run play` to restart.
 - If you search for a book that doesn't exist it will exit out and tell you no book was found.
 - If you enter a username that already exists your book will be added to that reading list.
+- If you run into issues with your version of node please upgrade your version of node. There have been [noted versions that have issues](https://github.com/manuelbieh/geolib/issues/208) with `type:module`.
+- I've also left the `.env` file on GitHub so that it can be used by those reviewing it but it would ideally be kept local.
 
 # AIMS :
 
@@ -36,6 +42,73 @@
 - this is a local reading list and not tied to Google Books’s account features.:white_check_mark:
 
 ---
+
+# FEEDBACK - 2ND SUBMISSION :
+
+- My first step when receiving the feedback on my project was to break down the feedback into practical tasks/steps.
+- I first needed to reproduce the errors stated in my feedback and figure out how to fix them.
+- I broke down the feedback into sections and gave notes on how I solved or planned to solve each issue.
+
+### FEEDBACK FIXES :
+
+#### FEEDBACK :
+
+###### 1. When following the instructions in the readme to start the app, I was unable to run it and the following error was displayed:
+
+`_throw new ERR_REQUIRE_ESM(filename, parentPath, packageJsonPath);_ _Error [ERR_REQUIRE_ESM]: Must use import to load ES Module_`
+
+- I've fixed it on my end to be able to run your app. Please can you make changes to your README so other users can seamlessly run it?
+  - #### Notes :
+    - My first step was to reproduce the errors listed in the feedback returned to me.
+    - I couldn't reproduce the steps for the first two errors but I assumed it was because I had not detailed that you need to run `npm i` after cloning the repo and navigating to the correct folder.
+    - I also had not taken into account that other people viewing the project may not have the same node version or environment that I had to run my project.
+    - So I listed the node version I built the project in while recommending those viewing the project are working in a suitable node environment.
+    - I used imports/ES modules which are still fairly new to node so the version a user has is important to how they can run the project without errors.
+    - I made changes and pushed them to my `second-sub` branch.
+
+#### FEEDBACK :
+
+###### 2. When entering an emoji as the book title, the following error was thrown: ✅
+
+`_TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters_`
+
+- What changes would you make to allow your app to handle emojis or unexpected characters?
+  - #### Notes :
+    - I would have liked to figure how to render unicode characters in the terminal but as a fix for now to ensure that the programme runs without errors I aimed to remove unescaped charcters before passing them into my `fetchFromApi()` function.
+    - I did this by writing a function called `correctString()` that took in a string and then replaced all characters that were not alphanumeric or a dash or underscore with an empty string `""`.
+    - I then moved this function into the utils file to abstract it from index.js.
+    - If I had more time I would have liked to figure out a way to actually parse emoji's and unescaped charcaters to allow them to be searched instead of removing them.
+
+#### FEEDBACK :
+
+###### 3. I noticed the *`fetchFromApi()`* method appears to be doing multiple actions, such as retrieving the data, then displaying the results etc. How can we make this function more readable?.
+
+    - #### Notes :
+
+      - I can make the function more readable but extracting some of the formatting code into the utils file making it it's own function.
+      - This would help with readabilty because each function would have it's own independent role.
+      - Write more understandable comments that makes the code easier to read through.
+      - I created a function called `formatBookResult()` and extracted it to the utils file.
+      - I also created the userOptions() function to extract repeated code from index.js and fetch.js into the utils file.
+
+#### FEEDBACK :
+
+###### 4. What were the main tradeoffs for the language choice you made?
+
+    - #### Notes :
+    - I chose to work with Node.js because Javascript is my strongest language, although this came with it's own setbacks.
+    - I'm glad I chose node.js because I didn't have to worry about learning syntax or the complexities of a new language. Using node.js allowed me to reallocate the time and energy I would have spent on learning a new language to figuring out how to build the cli programme.
+    - However, choosing node.js meant that I had to deal with the shortfalls of using node.js.
+    - An example of a problem I ran into was working with input/outputs in the terminal/console. There are other languages such as c++ that I've used that have this functionality built into their standard library's.
+    - I had to depend on external dependency's to work with input/outputs which made it a little difficult to test because I was also new to testing external modules and mock testing.
+    - In relation to the given project I think node.js was a suitable choice but if this project was to be scaled up or required more intensive tasks, then another language that handles intensive tasks more easily would be required.
+    - Using node.js however allowed me to use npm packages to help make up for the setbacks.
+    - Npm being one of the most popular package managers right now meant that I had a lot of resources when I ran into issues with node.js and it's libraries/packages.
+
+# Extra things I worked on :
+
+- I thought that users would be slightly confused by a zero-indexed based book ID system so I changed the range from [0-4] to [1-5].
+- I tried to work on some tests to mock the fs module, I still have a lot more to learn about testing dependencies but I thought I would try and see how far I got with it.
 
 # TIMELINE
 

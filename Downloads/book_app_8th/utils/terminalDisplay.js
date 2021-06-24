@@ -1,37 +1,29 @@
 //imports used for file reading/writing, calling utility functions and prompt for output/input.
 import fs from 'fs';
+import promptSync from 'prompt-sync';
+//utility functions to help extract repeated code.
 import {
-  findUsername,
-  writeIntoDatabase,
   colourText,
   updateDatabase,
   errorMessage,
+  goodbyeMsg,
 } from './utils.js';
-import promptSync from 'prompt-sync';
 
-//prompt allow the use of input/output to the terminal.
-//sigint allows the process to exit when you enter ctrl + c
+//prompt allows the use of input/output to the terminal.
+//sigint allows the process to exit immediately when you enter ctrl + c
 const prompt = promptSync({ sigint: true });
 
-/*function updates the database with the users book additions will outputing -
+/*function updates the database with the users book additions while outputing -
 messages to the terminal for book selection and update messages. */
 function updateBookshelf(username, response, save) {
   /*receives an input from the fetchFromApi() function in the fetch.js file 
   letting it know if the user wants to save their book or exit.*/
   if (save === '2') {
     //outputs colourful goodbye text if user lwishes to exit the process
-    console.log(
-      `${colourText('Bye,', 'blue')} ${colourText(
-        'Thank you',
-        'yellow'
-      )} ${colourText('for visiting', 'red')} ${colourText(
-        '8th Shelf :D',
-        'green'
-      )}`
-    );
+    goodbyeMsg();
   } else if (save === '1') {
     //if users select '1' then tge following asks for the user to input a Book ID
-    prompt(
+    console.log(
       colourText(
         "enter the book id for the book you'd like to save to your reading list. (Click Enter)",
         'magenta'
@@ -39,25 +31,14 @@ function updateBookshelf(username, response, save) {
     );
     let selection = prompt(
       colourText(
-        'Enter Book ID here (only enter number in the following range [0-4]):',
+        'Enter Book ID here (only enter number in the following range [1-5]):',
         'magenta'
       )
     );
+    selection = selection - 1;
     //function updates database.json with users newly added book.
     updateDatabase(response, selection, username);
-    console.log(
-      colourText(
-        `\nYour Book was added to your shelf, restart the app to view your shelf. 
-        \n${colourText('Bye,', 'blue')} ${colourText(
-          'Thank you',
-          'yellow'
-        )} ${colourText('for visiting', 'red')} ${colourText(
-          '8th Shelf :D',
-          'green'
-        )} `,
-        'magenta'
-      )
-    );
+    goodbyeMsg();
   } else {
     // if the user enters the wrong option it exists.
     errorMessage();
